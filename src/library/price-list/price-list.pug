@@ -1,0 +1,9 @@
+mixin PriceList(bem,data)
+    +b('price-list',bem)&attributes(attributes)
+        if data.title
+            +Heading({},{titleSize:3,title:data.title})
+        +e('price')
+            | !{data.price}
+        if data.text
+            +e('text')
+                | !{data.text}

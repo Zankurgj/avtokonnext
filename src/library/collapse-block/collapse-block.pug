@@ -1,0 +1,6 @@
+mixin CollapseBlock(length)
+    +b('collapse-block',{b:'js-collapse-block'})(data-collapse-length=length)
+        +e('content',{b:'js-collapse-block-content'})
+            if block
+                block
+        +Button({m:'theme-red',b:'js-collapse-button'},{text:'Показать еще',selector:'a'})(href="")

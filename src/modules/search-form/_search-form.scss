@@ -1,0 +1,15 @@
+.search-form{
+  padding-left: 30px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  &.state_active{
+    .search-form__inner{
+      width: 250px;
+      .search-form__input{
+        padding-right: 30px;
+      }
+    }
+  }
+}

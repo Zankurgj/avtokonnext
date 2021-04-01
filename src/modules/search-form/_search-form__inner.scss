@@ -1,0 +1,10 @@
+.search-form__inner{
+  display: flex;
+  flex-wrap: nowrap;
+  background: $grey;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.5s ease;
+  width: 0;
+}

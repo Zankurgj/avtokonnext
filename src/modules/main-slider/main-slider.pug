@@ -1,0 +1,23 @@
+mixin MainSlider(bem,data)
+    //main-slider
+    +b('main-slider',bem,'section')
+        +e('wrapper')
+            +e('inner',{b:'js-main-slider swiper-container'})
+                .swiper-wrapper
+                    each sliderItem in data
+                        // main-slider slide
+                        +e('item',{b:'swiper-slide'})(style=`background-image: url("${sliderItem.img}");`)
+                            +e('item-inner',{b:'container_full'})
+                                +e('item-title',{},'h2')
+                                    | !{sliderItem.title}
+                                +e('item-text')
+                                    | !{sliderItem.text}
+                                +Button({m:'theme-red'},{selector:'a',text:sliderItem.button.text})(href=sliderItem.button.link)
+                        //end main-slider slide
+            +e('nav-wrapper')
+                +e('nav-wrapper-arrows',{b: 'js-main-slider-arrows'})
+                    +HexIcon({},{icon:'#symbol_left-arrow'},'solid')(id='main-slider-prev')
+                    +HexIcon({},{icon:'#symbol_right-arrow'},'solid')(id='main-slider-next')
+                +e('nav-wrapper-dots',{b:'js-main-slider-dots'})
+
+    //end main-slider

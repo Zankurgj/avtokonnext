@@ -1,0 +1,20 @@
+
+mixin Header(bem)
+    //header
+    +b('header',{b:'js-sticky'},'header')
+        +e('wrapper',{b:'container_full'})
+            +e('inner',{b:'container__row'})
+                +Logo
+                +e('mobile-menu',{b:'js-mobile-menu-button'})
+                    span
+                    span
+                    span
+                +e('mobile-group',{b:'js-mobile-menu-container'})
+                    +mainMenu({},menuData)
+                    +e('user-block')
+                        +IconedLink({},{url:'#',text:'Оплатить',id:'#symbol_wallet'})
+                        +IconedLink({},{url:'#',text:'Войти',id:'#symbol_user'})
+                    +e('search-block')
+                        +b('phone',{},'a')(href="tel:88001001911")= '8 800 100 19 11'
+
+    //end header

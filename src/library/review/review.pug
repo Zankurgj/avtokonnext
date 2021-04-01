@@ -1,0 +1,10 @@
+mixin Review(bem,data)
+    +b('review',bem)
+        +rating({maxLength: 5, rating: data.rating})(readonly='readonly')
+        +e('date')
+            span= data.user+','
+            span= data.date
+        +e('title')
+            +Heading({},{titleSize:3,title:data.title})
+        +e('text')
+            | !{data.text}

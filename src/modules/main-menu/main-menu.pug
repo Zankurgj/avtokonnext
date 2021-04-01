@@ -1,0 +1,10 @@
+mixin mainMenu(bem,data)
+    //main-nav
+    +b('main-menu',bem,'nav')
+        +e('list',{},'ul')
+            -i=0
+            each menuItem in data
+                +e('item',{b:`${(i===0)?'state_active':''}`},'li')
+                    a(href = menuItem.url)= menuItem.text
+                    -i++
+    //end end main nav

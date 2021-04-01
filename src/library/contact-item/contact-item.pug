@@ -1,0 +1,18 @@
+mixin ContactItem(bem,data)
+    +b('contact-item',bem)
+        if data.title
+            +e('title')
+                | !{data.title}
+        if data.address
+            +e('address')
+                | !{data.address}
+        if data.list
+            each listItem in data.list
+                +e('list')
+                    if listItem.title
+                        +e('list-title')
+                            | !{listItem.title}
+                    +e('list-items',{},'ul')
+                        each item in listItem.list
+                            +e('list-item')
+                                | !{item}

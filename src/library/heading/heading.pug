@@ -1,0 +1,4 @@
+mixin Heading(bem,data)
+    +b('heading',{m:`size-h${data.titleSize}`,b:`${bem.b? bem.b : ''} ${bem.m? 'heading_'+bem.m : ''}`,e:bem.e})&attributes(attributes)
+        +e('title',{b:data.className},`h${data.titleSize}`)
+            | !{data.title}

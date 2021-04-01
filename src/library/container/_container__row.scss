@@ -1,0 +1,11 @@
+.container__row{
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 -15px;
+  &_left{
+    justify-content: flex-start!important;
+  }
+}

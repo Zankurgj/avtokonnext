@@ -1,0 +1,94 @@
+.heading{
+  &_size-h{
+    &1{
+      .heading__title{
+        font-size: 48px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.46;
+        letter-spacing: normal;
+        text-align: left;
+        color: $dark;
+        @include respond-to(md){
+          font-size: 35px;
+        }
+        @include respond-to(sm){
+          font-size: 24px;
+        }
+        @include respond-to(ss){
+          font-size: 18px;
+        }
+      }
+    }
+    &2{
+      .heading__title{
+        font-size: 42px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: $dark;
+        @include respond-to(md){
+          font-size: 30px;
+        }
+        @include respond-to(sm){
+          font-size: 24px;
+        }
+        @include respond-to(ss){
+          font-size: 18px;
+        }
+      }
+      margin-bottom: 30px;
+      @include respond-to(xs){
+        margin-bottom: 15px;
+      }
+    }
+    &3{
+      .heading__title{
+        font-size: 24px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: $dark;
+        @include respond-to(md){
+          font-size: 18px;
+        }
+        @include respond-to(sm){
+          font-size: 16px;
+        }
+        @include respond-to(ss){
+          font-size: 14px;
+        }
+      }
+    }
+
+  }
+  &__title{
+    padding: 0;
+    margin: 0;
+  }
+  &_theme-red-lined{
+    &:after{
+      content:'';
+      display: block;
+      width: 198px;
+      height: 2px;
+      background-color: $red;
+      margin-top: 27px;
+      @include respond-to(xs){
+        margin-top: 15px;
+      }
+    }
+  }
+  &_theme-red{
+    .heading__title{
+      color: $red;
+    }
+  }
+}

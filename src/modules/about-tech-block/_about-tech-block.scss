@@ -1,0 +1,45 @@
+.about-tech-block{
+  p{
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    @include respond-to(md){
+      font-size: 18px;
+    }
+    @include respond-to(sm){
+      font-size: 16px;
+    }
+    @include respond-to(ss){
+      font-size: 14px;
+    }
+    @include respond-to(xs){
+      margin-bottom: 15px;
+    }
+
+  }
+  .heading{
+    margin-bottom: 30px;
+    @include respond-to(xs){
+      margin-bottom: 15px;
+    }
+  }
+  &__content{
+    padding-top: 120px;
+    padding-bottom: 60px;
+    @include respond-to(ss){
+      padding: 30px 0;
+    }
+  }
+  &__list-item{
+    align-self: center;
+    .text-block{
+      width: 430px;
+    }
+  }
+}

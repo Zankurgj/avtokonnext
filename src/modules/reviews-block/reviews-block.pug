@@ -1,0 +1,18 @@
+mixin RewievsBlock(bem,data)
+    +b('reviews-block',bem,'section')
+        +e('wrapper',{b:'container'})
+            +e('inner',{b:'container__row'})
+                +e('title',{b:'container__col'})
+                    +Heading({},{titleSize:2,title:'Оценки и отзывы'})
+                    +e('info')
+                        +e('info-digit')
+                            span= data.rating
+                            |   из
+                            span= ' '+ data.count
+                        +e('info-text')
+                            | !{data.text}
+            +CollapseBlock(3)
+                +b('reviews-block__list',{b:'container__row js-reviews-block-list'})
+                    each review in data.list
+                        +b('reviews-block__list-item',{b:'container__col js-collapse-block-item'})
+                             +Review({},review)

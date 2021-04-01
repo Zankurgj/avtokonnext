@@ -1,0 +1,136 @@
+.info-block{
+  padding-bottom: 120px;
+  padding-top: 40px;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  @include respond-to(ss){
+    background-image: none!important;
+  }
+  @include respond-to(ss){
+    padding: 30px 0;
+  }
+  &_theme-grey{
+    padding-top: 120px;
+    background-color: $grey;
+    @include respond-to(ss){
+      padding: 30px 0;
+    }
+    .info-block__title {
+      margin-top: 0;
+    }
+  }
+  &__col{
+    margin: 0 15px;
+    width: calc(50% - 30px);
+    &_1{
+      width: calc(40% - 30px);
+    }
+    &_2{
+      width: calc(60% - 30px);
+    }
+    @include respond-to(ss){
+      width: calc(100vw - 30px);
+    }
+    &_text{
+      position: relative;
+      z-index: 2;
+    }
+    &_img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      @include respond-to(ss){
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+      }
+      @include respond-to(ss){
+        display: block;
+        width: calc(100vw - 30px);
+        &:after{
+          content: '';
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: transparentize($light,0.3);
+        }
+      }
+    }
+    .heading{
+      margin-top: 15px;
+    }
+    p{
+      font-size: 20px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.8;
+      letter-spacing: normal;
+      text-align: left;
+      color: $darkGrey;
+      margin: 0;
+      margin-bottom: 30px;
+      @include respond-to(md){
+        font-size: 16px;
+      }
+      @include respond-to(sm){
+        font-size: 14px;
+      }
+      @include respond-to(ss){
+        font-size: 12px;
+      }
+      @include respond-to(xs){
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $darkGrey;
+    text-transform: uppercase;
+    margin-top: 60px;
+    @include respond-to(md){
+      font-size: 16px;
+    }
+    @include respond-to(sm){
+      font-size: 14px;
+    }
+    @include respond-to(ss){
+      font-size: 12px;
+    }
+    @include respond-to(xs){
+      margin-top: 30px;
+    }
+  }
+  &__img{
+    max-width: 100%;
+  }
+  &__apps{
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 580px;
+    justify-content: space-between;
+    align-items: center;
+    @include respond-to(xs){
+      margin-top: 30px;
+    }
+    .c-button{
+      margin-bottom: 15px;
+    }
+  }
+}

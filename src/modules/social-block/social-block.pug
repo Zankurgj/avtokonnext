@@ -1,0 +1,15 @@
+mixin SocialBlock(bem,data)
+    //social block
+    +b('social-block',bem)
+        +e('title') Мы в соцсетях:
+        +e('list',{},'ul')
+            - i = 0
+            each item in data
+                - i++
+                +e('list-item')
+                    +e('link',{},'a')(href= item.url target='_blank')
+                        +Icon({},item.icon)
+                        span= item.text
+                if i < data.length
+                    +e('circle')
+    //end social block

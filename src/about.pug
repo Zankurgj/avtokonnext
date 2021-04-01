@@ -1,0 +1,14 @@
+extends blocks/layout
+
+block data
+
+    - const page = {name:'index',title: 'О компании'};
+
+
+block content
+    +AboutHead()
+    +AboutTechBlock()
+    +AboutStages()
+    +DocsBlock()
+    +NewsBlock()
+    +CallForm()

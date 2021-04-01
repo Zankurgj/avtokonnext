@@ -1,0 +1,42 @@
+.breadcrumbs{
+    display: block;
+    margin-bottom: 30px;
+    @include respond-to(xs){
+      margin-bottom: 15px;
+    }
+    &__link{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      .icon{
+        width: 30px;
+        height: 30px;
+        color: transparentize($darkGrey, 0.5);
+        margin-right: 30px;
+        @include respond-to(xs){
+          margin-right: 15px;
+        }
+      }
+      span{
+        display: inline-block;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-transform: uppercase;
+        color: $darkGrey;
+        @include respond-to(md){
+          font-size: 16px;
+        }
+        @include respond-to(sm){
+          font-size: 14px;
+        }
+        @include respond-to(ss){
+          font-size: 12px;
+        }
+      }
+    }
+}

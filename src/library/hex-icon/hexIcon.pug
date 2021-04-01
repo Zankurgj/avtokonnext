@@ -1,0 +1,12 @@
+mixin HexIcon(bem,data,type)
+    +b('hex-icon',bem)&attributes(attributes)
+        if type === 'solid'
+            +e('bg',{},'svg')
+                use(xlink:href="#symbol_hexsolid")
+        else
+            +e('bg',{},'svg')
+                use(xlink:href="#symbol_hexbordered")
+            +e('hover-bg',{},'svg')
+                use(xlink:href="#symbol_hexsolid")
+        +e('inner')
+            +Icon(bem,data.icon)

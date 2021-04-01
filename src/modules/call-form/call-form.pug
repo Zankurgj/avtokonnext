@@ -1,0 +1,10 @@
+mixin CallForm(bem,data)
+    +b('call-form',bem,'section')
+        +e('wrapper',{b:'container'})
+            +e('inner',{b:'container__row'})
+                +e('form',{b:"container__col js-ajax-form"},'form')(action="/ajax/test.json" method='post')
+                    +e('text',{},'h3') Заявка на обратный звонок
+                    +Input({})(value="" name='phone' data-phone="" placeholder="+7 (")
+                    +Button({m: 'theme-red'},{selector: 'button', text: 'Оставить заявку'})(type='submit')
+                    +e('text')
+                        | или позвонить:  <a href="tel:88001001911">8 (800) 100-19-11</a>

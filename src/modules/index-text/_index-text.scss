@@ -1,0 +1,11 @@
+.index-text{
+  &__item{
+    width: calc(33.33% - 30px);
+    @include respond-to(ss){
+      width: calc(50% - 30px);
+    }
+    @include respond-to(xs){
+      width: calc(100% - 30px);
+    }
+  }
+}

@@ -1,0 +1,7 @@
+mixin Icon(bem,id)
+    +b('icon',bem)
+        if String(id).startsWith('#')
+            svg
+                use(xlink:href=id)
+        else
+            img(src = id  alt = id)

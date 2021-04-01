@@ -1,0 +1,10 @@
+mixin HeaderBanner(bem,data)
+    +b('header-banner',bem,'section')(style=`background-image: url("${data.img}");`)
+        +e('wrapper')
+            +Heading({m:"theme-red-lined"},{titleSize:2,title:data.title})
+            +e('text')
+                | !{data.text}
+            if data.button
+                +Button({m:'theme-red'},{selector:'a',text:data.button.text})(href=data.button.link)
+            if block
+                block

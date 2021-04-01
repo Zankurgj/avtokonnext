@@ -1,0 +1,6 @@
+mixin Doc(bem,data)
+    - bem.b = 'container__col'
+    +b('doc',bem,'a')(href= data.url target="_blank")
+        +Icon({b:'doc__icon'},'#symbol_doc')
+        +e('title')
+            | !{data.title}

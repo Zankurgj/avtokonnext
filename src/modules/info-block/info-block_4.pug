@@ -1,0 +1,16 @@
+mixin InfoBlock4(bem,data)
+    +b('info-block',bem,'section')
+        +e('wrapper',{b:"container"})
+            +e('inner',{b:"container__row"})
+                +e('col',{m:'img'})
+                    +e('img',{},'img')(src="images/phone.jpg")
+                +e('col',{m:'text'})
+                    +e('title') Мобильные приложения
+                    +Heading({m:"theme-red-lined"},{titleSize:'2',title:'CobraConnex Rider Start позволяет управлять через мобильное приложение'})
+                    p Контролируйте Ваш автомобиль прямо с экрана Вашего смартфона, независимо от операционной системы iOS или Android.
+                    +ReadMore({},{url:'#',title:'Инструкции'})
+                    +e('apps')
+                        +Button({m:'theme-grey', b: 'c-button_type-iconed'},{selector:'a'})(href="#")
+                            +Icon({},'#symbol_appstore')
+                        +Button({m: 'theme-grey', b: 'c-button_type-iconed'},{selector:'a'})(href="#")
+                            +Icon({},'#symbol_google-play')

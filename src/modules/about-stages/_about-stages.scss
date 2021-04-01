@@ -1,0 +1,8 @@
+.about-stages{
+  &__content{
+    padding-top: 120px;
+    @include respond-to(ss){
+      padding: 30px 0;
+    }
+  }
+}

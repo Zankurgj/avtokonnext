@@ -1,0 +1,45 @@
+.rating{
+  display: inline-block;
+  &__content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__star{
+    margin-right: 5px;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    &:last-child{
+      margin-right: 0;
+    }
+    svg{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+    }
+    &-fill{
+      fill: $red;
+      width: 25px!important;
+      height: 25px!important;
+      position: static!important;
+      &-wrap{
+        width: 0;
+        height: 25px!important;
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+  &:not([readonly]){
+    .rating__star{
+      cursor: pointer;
+    }
+  }
+}

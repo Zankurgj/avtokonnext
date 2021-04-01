@@ -1,0 +1,15 @@
+mixin NewsSlider(bem,data)
+    +b('news-slider',{b:`js-slider swiper-container ${bem.b? bem.b : ''}`,m:bem.m,e:bem.e})&attributes(attributes)
+        +e('inner',{b: 'swiper-wrapper'})
+            each item in data
+                +e('item',{b: 'swiper-slide'})
+                    +e('item-date')= item.date
+                    +e('item-title')= item.title
+                    +e('item-text')
+                        | !{item.text}
+                    +ReadMore({m:'theme-underlined'},{href:'#',title:'Подробнее'})
+        +e('arrows')
+            +e('arrow',{b:"js-slider-prev"})
+                +Icon({},'#symbol_slider-arrow-left')
+            +e('arrow',{b:'js-slider-next'})
+                +Icon({},'#symbol_slider-arrow-right')

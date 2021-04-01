@@ -1,0 +1,31 @@
+mixin modals(bem)
+        +modal()(id="form1")
+            +b('modal-form',{b:'js-ajax-form'},'form')(method="POST", action="ajax/test.json")
+                +Heading({},{titleSize:2,title:'Оформление заявки'})
+                input(data-theme='' type='hidden' value ='' name='theme')
+                +b('container__row')
+                    +b('container__col',{m: 'half'})
+                        label
+                            span
+                                | Ваш телефон *
+                            +Input({m: 'theme-square'})(value="" name='name' required='required')
+                    +b('container__col',{m:'half'})
+                        label
+                            span
+                                |Ваше Имя *
+                            +Input({m:'theme-square'})(value="" name='phone' data-phone="" placeholder="+7 (")
+                    +b('container__col',{m:'full'})
+                        label
+                            span
+                                | Комментарий
+                            +b('c-input',{m: 'theme-square'})
+                                +e('field',{},'textarea')(name='comment')= ''
+                    +b('container__col',{m:'full'})
+                        +b('text-block',{m:'small'})
+                            p
+                                | * - поля, обязательные к заполнению.
+                                | Нажимая кнопку “Отправить сообщение” вы даете согласие на обработку
+                                | своих персональных данных.
+                                | <a href="#" target="_blank">Политика конфиденциальности</a>
+                    +b('container__col',{m:'full'})
+                        +Button({m: 'theme-red'},{selector: 'button', text: 'Оставить заявку'})(type='submit')

@@ -1,0 +1,13 @@
+mixin rating(data)
+    +b('rating',{b:'js-rating'})&attributes(attributes)
+        +e('input',{b:'js-rating-input'},'input')(type='hidden' value= data.rating name= rating)
+        +e('content')
+            -starCount = 0
+            while starCount < data.maxLength
+                -starCount++
+                +e('star',{b:'js-rating-star'})
+                    +e('star-border',{},'svg')
+                        use(xlink:href='#symbol_star')
+                    +e('star-fill-wrap',{b:'js-rating-decimal'},'span')
+                        +e('star-fill',{},'svg')
+                            use(xlink:href='#symbol_star-filled')

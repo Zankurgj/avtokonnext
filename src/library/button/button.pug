@@ -1,0 +1,9 @@
+mixin Button(bem,data)
+    if(data.selector === 'input')
+        attributes.value = data.text
+    +b('c-button',bem,data.selector)&attributes(attributes)
+        if(data.selector !== 'input')
+            if block
+                block
+            else
+                +e('text',{},'span')= data.text

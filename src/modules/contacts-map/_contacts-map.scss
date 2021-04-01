@@ -1,0 +1,81 @@
+.contacts-map{
+  padding: 120px 0;
+  @include respond-to(sm){
+    padding: 90px 0;
+  }
+  @include respond-to(xs){
+    padding: 30px 0;
+  }
+  .heading{
+    margin: 0;
+  }
+  &__select{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    label{
+      select{
+        margin-left: 20px;
+        color: $red;
+        @include respond-to(ss){
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+  &__map-container{
+    position: relative;
+    padding-top: 70%;
+    height: 100%;
+    &.state_loading{
+      &:after{
+        content:'';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../images/location_loader.gif") no-repeat center;
+      }
+    }
+  }
+  &__map-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__map-detail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    .contact-item{
+      &:last-child{
+        margin-bottom: 0!important;
+      }
+    }
+  }
+  &__bottom{
+    margin-top: 60px;
+    @include respond-to(xs){
+      margin-top: 30px;
+    }
+    .heading,.text-block{
+      width: 100%;
+    }
+    .container__row{
+      justify-content: flex-start;
+    }
+  }
+  &__left,&__right{
+    margin-bottom: 60px;
+    @include respond-to(xs){
+      margin-bottom: 30px;
+    }
+  }
+}

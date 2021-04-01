@@ -1,0 +1,25 @@
+.header__search-block{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .phone{
+    margin-left: 60px;
+    @include respond-to(sm){
+      margin-left: 30px;
+    }
+    @include respond-to(md){
+      margin-left: 30px;
+    }
+    @include respond-to(xs){
+      margin-left: 30px;
+    }
+  }
+  @include respond-to(md){
+    margin-right: 0;
+  }
+  @include respond-to(ss){
+    .phone{
+      margin-left: 0;
+    }
+  }
+}

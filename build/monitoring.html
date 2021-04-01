@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>monitoring</title>
+    <meta name="description" content="Description">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <noscript>
+      <div class="noscript-alert">для корректной работы сайта включите java-script
+      </div>
+    </noscript>
+    <div class="page">
+      <!--header-->
+      <header class="header js-sticky">
+        <div class="header__wrapper container_full">
+          <div class="header__inner container__row">
+            <a class="logo" href="#"><img src="images/logo.png" alt="logo"/>
+            </a>
+            <div class="header__mobile-menu js-mobile-menu-button"><span></span><span></span><span></span>
+            </div>
+            <div class="header__mobile-group js-mobile-menu-container">
+              <!--main-nav-->
+              <nav class="main-menu">
+                <ul class="main-menu__list">
+                  <li class="main-menu__item state_active"><a href="#">АСН терминал</a>
+                  </li>
+                  <li class="main-menu__item"><a href="#">Mониторинг</a>
+                  </li>
+                  <li class="main-menu__item"><a href="#">Противоугонные комплексы</a>
+                  </li>
+                </ul>
+              </nav>
+              <!--end end main nav-->
+              <div class="header__user-block">
+                <a class="iconed-link" href="#">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="#symbol_wallet"></use>
+                    </svg>
+                  </span>
+                  <span class="iconed-link__text">Оплатить
+                  </span>
+                </a>
+                <a class="iconed-link" href="#">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="#symbol_user"></use>
+                    </svg>
+                  </span>
+                  <span class="iconed-link__text">Войти
+                  </span>
+                </a>
+              </div>
+              <div class="header__search-block">
+                <a class="phone" href="tel:88001001911">8 800 100 19 11
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--end header-->
+      <!-- content-->
+      <main class="main">
+        <section class="header-banner header-banner_theme-contain" style="background-image: url(&quot;images/manitoring_banner_bg.jpg&quot;);">
+          <div class="header-banner__wrapper">
+            <div class="heading heading_size-h2 heading_theme-red-lined">
+              <h2 class="heading__title">Спутниковый мониторинг  транспорта (ГЛОНАСС/GPS)
+              </h2>
+            </div>
+            <div class="header-banner__text">Полный комплекс функций, необходимых современной организациидля управления автопарком предприятия любого масштаба.
+            </div>
+            <a class="c-button c-button_theme-light" href="#">
+              <span class="c-button__text">Демо-версия
+              </span>
+            </a>
+            <a class="c-button c-button_theme-red" href="#" data-show-modal="form1" data-form-theme="dsfdsfsd">
+              <span class="c-button__text">заявка на подключение
+              </span>
+            </a>
+          </div>
+        </section>
+        <div class="container">
+          <div class="container__row">
+            <div class="container__col container__col_full">
+              <ul class="tabs tabs_theme-stretch js-tabs">
+                <li class="tabs__item js-tabs-link state_active" data-id="cobra" data-href="/monitoring.html?id=cobra">Кобра мониторинг
+                </li>
+                <li class="tabs__item js-tabs-link" data-id="cobraplus" data-href="/monitoring.html?id=cobraplus">Кобра мониторинг +
+                </li>
+                <li class="tabs__item js-tabs-link" data-id="germetic" data-href="/monitoring.html?id=germetic">Комплект герметичность
+                </li>
+                <li class="tabs__item js-tabs-link" data-id="canMonitorng" data-href="/monitoring.html?id=canMonitorng">Мониторинг can
+                </li>
+              </ul>
+            </div>
+            <div class="container__col container__col_full">
+              <div data-category-id="cobra">
+                <div class="container__row p-90">
+                  <div class="container__col container__col_full">
+                    <div class="container__row">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Система мониторинга Cobra разработана специально для <br> организаций, имеющих парк автомобилей или спецтехники
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Строительные организации
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Прокат и аренда авто
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Инкассация
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Логистические компании
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Службы доставки
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Услуги спецтранспорта
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container__row p-120">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Преимущества использования системы мониторинга <br> транспорта Cobra
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_full">
+                        <ul class="themed-list themed-list_list-type-circle themed-list_mode-double-col">
+                          <li class="themed-list__li">Опыт более 18 лет
+                          </li>
+                          <li class="themed-list__li">Производим и продаем собственное оборудование
+                          </li>
+                          <li class="themed-list__li">Поддержка 24/7
+                          </li>
+                          <li class="themed-list__li">Сертифицированные технологии и персонал
+                          </li>
+                          <li class="themed-list__li">Собственная станция ТО
+                          </li>
+                          <li class="themed-list__li">Мобильные приложения
+                          </li>
+                          <li class="themed-list__li">Гарантия
+                          </li>
+                          <li class="themed-list__li">Повышение эффективности управления автопарком
+                          </li>
+                          <li class="themed-list__li">Оптимизация затрат всего предприятия
+                          </li>
+                          <li class="themed-list__li">Повышение исполнительской дисциплины водителей
+                          </li>
+                          <li class="themed-list__li">Уменьшение издержек предприятия по расходу топлива
+                          </li>
+                          <li class="themed-list__li">Контроль перевозимого груза
+                          </li>
+                          <li class="themed-list__li">Обеспечение безопасности автопарка и сотрудников
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="container__row">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Зачем нужен мониторинг транспорта
+                          </h2>
+                        </div>
+                        <div class="text-block">
+                          <p>Хороший опыт установки профессионалльного противоугонного оборудования и эффективного <br> противодействия угонам помогает нам с уверенностью гарантировать ваше спокойствие.</p>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_location-pin"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль перемещения транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gear-loading"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль работы механизмов
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_speedometer"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль скоростного режима
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gasoline-pump"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль расхода топлива
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_location-pin"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль перемещения транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gear-loading"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль работы механизмов
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_speedometer"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль скоростного режима
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon"><img src="https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png" alt="https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png"/>
+                          </div>
+                          <div class="short-text-block__text">Контроль расхода топлива
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container__row p-120">
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="15">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">15
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Уменьшение амортизации транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="30">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">30
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Сокращение затрат на ГСМ
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="70">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">70
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Сокращение коммуникационных расходов
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-category-id="cobraplus">
+                <div class="container__row p-90">
+                  <div class="container__col container__col_full">
+                    <div class="container__row">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Система мониторинга Cobra разработана специально для <br> организаций, имеющих парк автомобилей или спецтехники
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Строительные организации
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Прокат и аренда авто
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Инкассация
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Логистические компании
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Службы доставки
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Услуги спецтранспорта
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container__row p-120">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Преимущества использования системы мониторинга <br> транспорта Cobra
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_full">
+                        <ul class="themed-list themed-list_list-type-circle themed-list_mode-double-col">
+                          <li class="themed-list__li">Опыт более 18 лет
+                          </li>
+                          <li class="themed-list__li">Производим и продаем собственное оборудование
+                          </li>
+                          <li class="themed-list__li">Поддержка 24/7
+                          </li>
+                          <li class="themed-list__li">Сертифицированные технологии и персонал
+                          </li>
+                          <li class="themed-list__li">Собственная станция ТО
+                          </li>
+                          <li class="themed-list__li">Мобильные приложения
+                          </li>
+                          <li class="themed-list__li">Гарантия
+                          </li>
+                          <li class="themed-list__li">Повышение эффективности управления автопарком
+                          </li>
+                          <li class="themed-list__li">Оптимизация затрат всего предприятия
+                          </li>
+                          <li class="themed-list__li">Повышение исполнительской дисциплины водителей
+                          </li>
+                          <li class="themed-list__li">Уменьшение издержек предприятия по расходу топлива
+                          </li>
+                          <li class="themed-list__li">Контроль перевозимого груза
+                          </li>
+                          <li class="themed-list__li">Обеспечение безопасности автопарка и сотрудников
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="container__row">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Зачем нужен мониторинг транспорта
+                          </h2>
+                        </div>
+                        <div class="text-block">
+                          <p>Хороший опыт установки профессионалльного противоугонного оборудования и эффективного <br> противодействия угонам помогает нам с уверенностью гарантировать ваше спокойствие.</p>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_location-pin"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль перемещения транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gear-loading"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль работы механизмов
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_speedometer"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль скоростного режима
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gasoline-pump"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль расхода топлива
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_location-pin"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль перемещения транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gear-loading"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль работы механизмов
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_speedometer"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль скоростного режима
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon"><img src="https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png" alt="https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png"/>
+                          </div>
+                          <div class="short-text-block__text">Контроль расхода топлива
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container__row p-120">
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="15">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">15
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Уменьшение амортизации транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="30">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">30
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Сокращение затрат на ГСМ
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="70">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">70
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Сокращение коммуникационных расходов
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-category-id="germetic">
+                <div class="container__row p-90">
+                  <div class="container__col container__col_full">
+                    <div class="container__row">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Система мониторинга Cobra разработана специально для <br> организаций, имеющих парк автомобилей или спецтехники
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Строительные организации
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Прокат и аренда авто
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Инкассация
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Логистические компании
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Службы доставки
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Услуги спецтранспорта
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container__row p-120">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Преимущества использования системы мониторинга <br> транспорта Cobra
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_full">
+                        <ul class="themed-list themed-list_list-type-circle themed-list_mode-double-col">
+                          <li class="themed-list__li">Опыт более 18 лет
+                          </li>
+                          <li class="themed-list__li">Производим и продаем собственное оборудование
+                          </li>
+                          <li class="themed-list__li">Поддержка 24/7
+                          </li>
+                          <li class="themed-list__li">Сертифицированные технологии и персонал
+                          </li>
+                          <li class="themed-list__li">Собственная станция ТО
+                          </li>
+                          <li class="themed-list__li">Мобильные приложения
+                          </li>
+                          <li class="themed-list__li">Гарантия
+                          </li>
+                          <li class="themed-list__li">Повышение эффективности управления автопарком
+                          </li>
+                          <li class="themed-list__li">Оптимизация затрат всего предприятия
+                          </li>
+                          <li class="themed-list__li">Повышение исполнительской дисциплины водителей
+                          </li>
+                          <li class="themed-list__li">Уменьшение издержек предприятия по расходу топлива
+                          </li>
+                          <li class="themed-list__li">Контроль перевозимого груза
+                          </li>
+                          <li class="themed-list__li">Обеспечение безопасности автопарка и сотрудников
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="container__row">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Зачем нужен мониторинг транспорта
+                          </h2>
+                        </div>
+                        <div class="text-block">
+                          <p>Хороший опыт установки профессионалльного противоугонного оборудования и эффективного <br> противодействия угонам помогает нам с уверенностью гарантировать ваше спокойствие.</p>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_location-pin"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль перемещения транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gear-loading"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль работы механизмов
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_speedometer"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль скоростного режима
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gasoline-pump"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль расхода топлива
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_location-pin"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль перемещения транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gear-loading"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль работы механизмов
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_speedometer"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль скоростного режима
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon"><img src="https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png" alt="https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png"/>
+                          </div>
+                          <div class="short-text-block__text">Контроль расхода топлива
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container__row p-120">
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="15">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">15
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Уменьшение амортизации транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="30">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">30
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Сокращение затрат на ГСМ
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="70">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">70
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Сокращение коммуникационных расходов
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-category-id="canMonitorng">
+                <div class="container__row p-90">
+                  <div class="container__col container__col_full">
+                    <div class="container__row">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Система мониторинга Cobra разработана специально для <br> организаций, имеющих парк автомобилей или спецтехники
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Строительные организации
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Прокат и аренда авто
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Инкассация
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Логистические компании
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Службы доставки
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="short-text-block short-text-block_text-centered short-text-block_theme-gradient">
+                          <div class="short-text-block__text">Услуги спецтранспорта
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container__row p-120">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Преимущества использования системы мониторинга <br> транспорта Cobra
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_full">
+                        <ul class="themed-list themed-list_list-type-circle themed-list_mode-double-col">
+                          <li class="themed-list__li">Опыт более 18 лет
+                          </li>
+                          <li class="themed-list__li">Производим и продаем собственное оборудование
+                          </li>
+                          <li class="themed-list__li">Поддержка 24/7
+                          </li>
+                          <li class="themed-list__li">Сертифицированные технологии и персонал
+                          </li>
+                          <li class="themed-list__li">Собственная станция ТО
+                          </li>
+                          <li class="themed-list__li">Мобильные приложения
+                          </li>
+                          <li class="themed-list__li">Гарантия
+                          </li>
+                          <li class="themed-list__li">Повышение эффективности управления автопарком
+                          </li>
+                          <li class="themed-list__li">Оптимизация затрат всего предприятия
+                          </li>
+                          <li class="themed-list__li">Повышение исполнительской дисциплины водителей
+                          </li>
+                          <li class="themed-list__li">Уменьшение издержек предприятия по расходу топлива
+                          </li>
+                          <li class="themed-list__li">Контроль перевозимого груза
+                          </li>
+                          <li class="themed-list__li">Обеспечение безопасности автопарка и сотрудников
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="container__row">
+                      <div class="container__col container__col_full">
+                        <div class="heading heading_size-h2">
+                          <h2 class="heading__title">Зачем нужен мониторинг транспорта
+                          </h2>
+                        </div>
+                        <div class="text-block">
+                          <p>Хороший опыт установки профессионалльного противоугонного оборудования и эффективного <br> противодействия угонам помогает нам с уверенностью гарантировать ваше спокойствие.</p>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_location-pin"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль перемещения транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gear-loading"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль работы механизмов
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_speedometer"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль скоростного режима
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gasoline-pump"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль расхода топлива
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_location-pin"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль перемещения транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_gear-loading"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль работы механизмов
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon">
+                            <svg>
+                              <use xlink:href="#symbol_speedometer"></use>
+                            </svg>
+                          </div>
+                          <div class="short-text-block__text">Контроль скоростного режима
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_half">
+                        <div class="short-text-block short-text-block_text-theme-bolder">
+                          <div class="icon"><img src="https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png" alt="https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png"/>
+                          </div>
+                          <div class="short-text-block__text">Контроль расхода топлива
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container__row p-120">
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="15">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">15
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Уменьшение амортизации транспорта
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="30">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">30
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Сокращение затрат на ГСМ
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container__col container__col_3">
+                        <div class="percentage-block js-percentage-block" data-num="70">
+                          <div class="percentage-block__content">
+                            <div class="percentage-block__percent js-percentage-block-percent">70
+                            </div>
+                            <div class="percentage-block__tips">%
+                            </div>
+                          </div>
+                          <div class="percentage-block__description">Сокращение коммуникационных расходов
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-block info-block_theme-grey p-60">
+          <div class="container">
+            <div class="container__row">
+              <div class="container__col container__col_full">
+                <div class="heading heading_size-h2">
+                  <h2 class="heading__title">Стоимость комплекта
+                  </h2>
+                </div>
+                <div class="text-block">
+                  <p>Обратите внимание, что стоимость комплекта является индикативной и может отличаться в разлиных регионах. <br> Указаные цены ни при каких обстоятельствах не являются публичной офертой.</p>
+                </div>
+                <div class="call-form__form call-form__form_short" data-category-id="cobra">
+                  <div class="price-list price-list_big">
+                    <div class="price-list__price"><span>17.500</span> руб.
+                    </div>
+                  </div>
+                  <a class="c-button c-button_theme-light" href="#">
+                    <span class="c-button__text">Демо-версия
+                    </span>
+                  </a>
+                  <a class="c-button c-button_theme-red" href="#" data-show-modal="form1" data-form-theme="dsfdsfsd">
+                    <span class="c-button__text">заявка на подключение
+                    </span>
+                  </a>
+                </div>
+                <div class="call-form__form call-form__form_short" data-category-id="cobraplus">
+                  <div class="price-list price-list_big">
+                    <div class="price-list__price"><span>18.500</span> руб.
+                    </div>
+                  </div>
+                  <a class="c-button c-button_theme-light" href="#">
+                    <span class="c-button__text">Демо-версия
+                    </span>
+                  </a>
+                  <a class="c-button c-button_theme-red" href="#" data-show-modal="form1" data-form-theme="dsfdsfsd">
+                    <span class="c-button__text">заявка на подключение
+                    </span>
+                  </a>
+                </div>
+                <div class="call-form__form call-form__form_short" data-category-id="germetic">
+                  <div class="price-list price-list_big">
+                    <div class="price-list__price"><span>19.500</span> руб.
+                    </div>
+                  </div>
+                  <a class="c-button c-button_theme-light" href="#">
+                    <span class="c-button__text">Демо-версия
+                    </span>
+                  </a>
+                  <a class="c-button c-button_theme-red" href="#" data-show-modal="form1" data-form-theme="dsfdsfsd">
+                    <span class="c-button__text">заявка на подключение
+                    </span>
+                  </a>
+                </div>
+                <div class="call-form__form call-form__form_short" data-category-id="canMonitorng">
+                  <div class="price-list price-list_big">
+                    <div class="price-list__price"><span>20.500</span> руб.
+                    </div>
+                  </div>
+                  <a class="c-button c-button_theme-light" href="#">
+                    <span class="c-button__text">Демо-версия
+                    </span>
+                  </a>
+                  <a class="c-button c-button_theme-red" href="#" data-show-modal="form1" data-form-theme="dsfdsfsd">
+                    <span class="c-button__text">заявка на подключение
+                    </span>
+                  </a>
+                </div>
+                <div class="text-block">
+                  <p><strong>Акция!</strong>  Скидка -5% при подключении до 01.01.2020. Подробнее по телефону 8 800 100 19 11</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container p-90">
+          <div class="container__row">
+            <div class="container__col container__col_full">
+              <div class="heading heading_size-h2">
+                <h2 class="heading__title">Наши клиенты
+                </h2>
+              </div>
+            </div>
+            <div class="container__col container__col_full">
+              <ul class="clients-list">
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/63.png"/>
+                  </span>
+                </li>
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/64.png"/>
+                  </span>
+                </li>
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/65.png"/>
+                  </span>
+                </li>
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/66.png"/>
+                  </span>
+                </li>
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/69.png"/>
+                  </span>
+                </li>
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/63.png"/>
+                  </span>
+                </li>
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/64.png"/>
+                  </span>
+                </li>
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/65.png"/>
+                  </span>
+                </li>
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/66.png"/>
+                  </span>
+                </li>
+                <li class="client">
+                  <span class="client__inner">
+                    <img class="client__img" src="images/69.png"/>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <section class="info-block">
+          <div class="info-block__wrapper container">
+            <div class="info-block__inner container__row">
+              <div class="info-block__col info-block__col_img">
+                <img class="info-block__img" src="images/phone.jpg"/>
+              </div>
+              <div class="info-block__col info-block__col_text">
+                <div class="info-block__title">Мобильные приложения
+                </div>
+                <div class="heading heading_size-h2 heading_theme-red-lined">
+                  <h2 class="heading__title">Разработаны специально
+для противоугонных 
+систем АВТОКОННЕКС
+                  </h2>
+                </div>
+                <p>Контролируйте Ваш автомобиль прямо с экрана Вашего смартфона, независимо от операционной системы iOS или Android.</p>
+                <a class="read-more" href="#"><span>Инструкции</span>
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="#symbol_left-arr"></use>
+                    </svg>
+                  </span>
+                </a>
+                <div class="info-block__apps">
+                  <a class="c-button c-button_theme-grey c-button_type-iconed" href="#">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#symbol_appstore"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="c-button c-button_theme-grey c-button_type-iconed" href="#">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#symbol_google-play"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="call-form">
+          <div class="call-form__wrapper container">
+            <div class="call-form__inner container__row">
+              <form class="call-form__form container__col js-ajax-form" action="/ajax/test.json" method="post">
+                <h3 class="call-form__text">Заявка на обратный звонок
+                </h3>
+                <div class="c-input">
+                  <input class="c-input__field" value="" name="phone" data-phone="" placeholder="+7 ("/>
+                </div>
+                <button class="c-button c-button_theme-red" type="submit">
+                  <span class="c-button__text">Оставить заявку
+                  </span>
+                </button>
+                <div class="call-form__text">или позвонить:  <a href="tel:88001001911">8 (800) 100-19-11</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- end content-->
+      <!--footer-->
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__inner">
+            <div class="footer__share">
+              <div class="footer__share-inner container">
+                <!--social block-->
+                <div class="social-block">
+                  <div class="social-block__title">Мы в соцсетях:
+                  </div>
+                  <ul class="social-block__list">
+                    <li class="social-block__list-item">
+                      <a class="social-block__link" href="#" target="_blank">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#symbol_twitter"></use>
+                          </svg>
+                        </span><span></span>
+                      </a>
+                    </li>
+                    <li class="social-block__circle">
+                    </li>
+                    <li class="social-block__list-item">
+                      <a class="social-block__link" href="#" target="_blank">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#symbol_linked-in"></use>
+                          </svg>
+                        </span><span></span>
+                      </a>
+                    </li>
+                    <li class="social-block__circle">
+                    </li>
+                    <li class="social-block__list-item">
+                      <a class="social-block__link" href="#" target="_blank">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#symbol_vk"></use>
+                          </svg>
+                        </span><span></span>
+                      </a>
+                    </li>
+                    <li class="social-block__circle">
+                    </li>
+                    <li class="social-block__list-item">
+                      <a class="social-block__link" href="#" target="_blank">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#symbol_facebook"></use>
+                          </svg>
+                        </span><span></span>
+                      </a>
+                    </li>
+                    <li class="social-block__circle">
+                    </li>
+                    <li class="social-block__list-item">
+                      <a class="social-block__link" href="#" target="_blank">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#symbol_youtube"></use>
+                          </svg>
+                        </span><span></span>
+                      </a>
+                    </li>
+                    <li class="social-block__circle">
+                    </li>
+                    <li class="social-block__list-item">
+                      <a class="social-block__link" href="#" target="_blank">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#symbol_instagramm"></use>
+                          </svg>
+                        </span><span></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!--end social block-->
+              </div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__menu-inner container">
+                <div class="footer__menu-row container__row">
+                  <div class="footer__menu-col">
+                    <!--menu list-->
+                    <div class="footer-menu-list">
+                      <span class="footer-menu-list__title">наши Услуги
+                      </span>
+                      <ul class="footer-menu-list__items">
+                        <li class="footer-menu-list__link-item"><a href="#">АСН-терминал</a>
+                        </li>
+                        <li class="footer-menu-list__link-item"><a href="#">Системы мониторинга</a>
+                        </li>
+                        <li class="footer-menu-list__link-item"><a href="#">Противоугонные комплексы</a>
+                        </li>
+                        <li class="footer-menu-list__link-item"><a href="#">Мобильные приложения</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!--end menu list-->
+                  </div>
+                  <div class="footer__menu-col">
+                    <!--menu list-->
+                    <div class="footer-menu-list">
+                      <span class="footer-menu-list__title">Партнерам
+                      </span>
+                      <ul class="footer-menu-list__items">
+                        <li class="footer-menu-list__link-item"><a href="#">Дилерам</a>
+                        </li>
+                        <li class="footer-menu-list__link-item"><a href="#">Автопроизводителям</a>
+                        </li>
+                        <li class="footer-menu-list__link-item"><a href="#">Страховым компаниям</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!--end menu list-->
+                  </div>
+                  <div class="footer__menu-col">
+                    <!--menu list-->
+                    <div class="footer-menu-list">
+                      <span class="footer-menu-list__title">О Компании
+                      </span>
+                      <ul class="footer-menu-list__items">
+                        <li class="footer-menu-list__link-item"><a href="#">Этапы развития</a>
+                        </li>
+                        <li class="footer-menu-list__link-item"><a href="#">Сертификаты</a>
+                        </li>
+                        <li class="footer-menu-list__link-item"><a href="#">Реквизиты</a>
+                        </li>
+                        <li class="footer-menu-list__link-item"><a href="#">Контакты</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!--end menu list-->
+                  </div>
+                  <div class="footer__menu-col">
+                    <!--menu list-->
+                    <div class="footer-menu-list">
+                      <span class="footer-menu-list__title">Время работы
+                      </span>
+                      <ul class="footer-menu-list__items">
+                        <li class="footer-menu-list__link-item"><span>Понедельник-Пятница с 09-00 до 18-00</span>
+                        </li>
+                        <li class="footer-menu-list__link-item"><span>Центр оперативного реагирования - 24/7</span>
+                        </li>
+                        <li class="footer-menu-list__link-item"><span>Телефон: <a href="tel:74959211911">+7 (495) 921-19-11</a></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!--end menu list-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__copyright">
+              <div class="footer__copyright-inner container">
+                <p>© 2001-2019 Автоконнекс. Россия, Москва, 119334, 5-й Донской проезд, д. 19</p>
+                <p>Единый Информационный Центр: +7 (495) 921 19 11</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end footer-->
+      </footer>
+    </div>
+    <div class="modal" data-modal="" id="form1">
+      <div class="modal__content js-modal-content">
+        <form class="modal-form js-ajax-form" method="POST" action="ajax/test.json">
+          <div class="heading heading_size-h2">
+            <h2 class="heading__title">Оформление заявки
+            </h2>
+          </div>
+          <input data-theme="" type="hidden" value="" name="theme"/>
+          <div class="container__row">
+            <div class="container__col container__col_half">
+              <label><span>Ваш телефон *</span>
+                <div class="c-input c-input_theme-square">
+                  <input class="c-input__field c-input__field_theme-square" value="" name="name" required="required"/>
+                </div>
+              </label>
+            </div>
+            <div class="container__col container__col_half">
+              <label><span>Ваше Имя *</span>
+                <div class="c-input c-input_theme-square">
+                  <input class="c-input__field c-input__field_theme-square" value="" name="phone" data-phone="" placeholder="+7 ("/>
+                </div>
+              </label>
+            </div>
+            <div class="container__col container__col_full">
+              <label><span>Комментарий</span>
+                <div class="c-input c-input_theme-square">
+                  <textarea class="c-input__field" name="comment">
+                  </textarea>
+                </div>
+              </label>
+            </div>
+            <div class="container__col container__col_full">
+              <div class="text-block text-block_small">
+                <p>
+                  * - поля, обязательные к заполнению.
+                  Нажимая кнопку “Отправить сообщение” вы даете согласие на обработку
+                  своих персональных данных.
+                  <a href="#" target="_blank">Политика конфиденциальности</a>
+                </p>
+              </div>
+            </div>
+            <div class="container__col container__col_full">
+              <button class="c-button c-button_theme-red" type="submit">
+                <span class="c-button__text">Оставить заявку
+                </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="svg-sprite" id="svg-sprite" data-src="images/sprite.svg"></div>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

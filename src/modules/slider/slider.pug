@@ -1,0 +1,30 @@
+mixin Slider(bem,data)
+    //slider
+    +b('slider',bem)
+        +e('content',{b:'container'})
+            +e('wrapper',{b:'js-slider swiper-container'})&attributes(attributes)
+                +e('inner',{b:'swiper-wrapper container_row'})
+                    each item in data
+                        //slide
+                        if item.img
+                            +e('item',{b:'swiper-slide'})
+                                +e('item-inner')(style=`background-image: url("${item.img}");`)
+                                    +e('item-content')
+                                        if item.title
+                                            +e('title',{m:`theme-${item.color}`})= item.title
+                                        if item.text
+                                            +e('text',{m:`theme-${item.color}`})= item.text
+                        else
+                            +e('item',{b: 'swiper-slide'})
+                                +e('item-inner')
+                                    +e('item-content')
+                                        if item.title
+                                            +e('title',{m: `theme-${item.color}`})= item.title
+                                        if item.text
+                                            +e('text',{m: `theme-${item.color}`})= item.text
+                +e('arrows')
+                    +HexIcon({b:'js-slider-prev'},{icon:'#symbol_left-arrow'})
+                    +HexIcon({b:'js-slider-next'},{icon:'#symbol_right-arrow'})
+
+                        //end slide
+    //end slider

@@ -1,0 +1,11 @@
+mixin InfoBlock3(bem,data)
+    +b('info-block',bem,'section')
+        +e('wrapper',{b:"container"})
+            +e('inner',{b:"container__row"})
+                +e('col',{m:'img'})
+                    +e('img',{},'img')(src="images/phone.jpg")
+                +e('col',{m:'text'})
+                    +e('title') Мобильные приложения
+                    +Heading({m:"theme-red-lined"},{titleSize:'2',title:'Разработаны специально для противоугонных систем АВТОКОННЕКС'})
+                    p Контролируйте Ваш автомобиль прямо с экрана Вашего смартфона, независимо от операционной системы iOS или Android.
+                    +ReadMore({},{url:'#',title:'Инструкции'})

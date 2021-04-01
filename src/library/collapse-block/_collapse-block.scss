@@ -1,0 +1,15 @@
+.collapse-block{
+  &__content{
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    text-align: left;
+    margin-bottom: 30px;
+    @include respond-to(xs){
+      margin-bottom: 15px;
+    }
+    &.state_no-transition{
+      transition: none;
+    }
+  }
+  text-align: center;
+}

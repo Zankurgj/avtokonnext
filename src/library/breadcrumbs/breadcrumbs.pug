@@ -1,0 +1,5 @@
+mixin Breadcrumbs(bem,data)
+    +b('breadcrumbs')
+        +e('link',{},'a')(href=data.url)
+            +Icon({},'#symbol_left-arrow')
+            span= data.title

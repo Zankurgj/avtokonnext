@@ -1,0 +1,21 @@
+mixin ProductItem(bem,data)
+    +b('product-item',bem)&attributes(attributes)
+        +e('content')
+            +e('type')
+                | !{data.type}
+            +e('name')
+                +Heading({},{titleSize:2,title:data.name})
+            +e('img')
+                img(src= data.img alt= data.name)
+            +rating({maxLength: 5, rating: data.rating})(readonly='readonly')
+            if data.propsBefore
+                +e('props-before')= data.propsBefore
+            +e('props',{m:data.propsType? `type-${data.propsType}` : 'type-default'},'ul')
+                each prop in data.props
+                    +e('props-item')
+                        if data.propsBefore
+                            +Icon({},'#symbol_plus')
+                        | !{prop}
+            +e('link',{},'a')(href=data.url? data.url : '#')
+            +ReadMore({},{url:'#',title:'Подробнее'})
+

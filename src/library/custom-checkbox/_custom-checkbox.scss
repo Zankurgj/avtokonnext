@@ -1,0 +1,50 @@
+.custom-checkbox{
+  display: block;
+  cursor: pointer;
+  &__input{
+    position: absolute;
+    visibility: hidden;
+  }
+  &.custom-checkbox_red{
+    [type=checkbox]{
+      &:checked{
+        +.custom-checkbox__view{
+          background-color: $red
+        }
+      }
+    }
+  }
+  [type=checkbox]{
+    &:checked{
+      +.custom-checkbox__view{
+        &:before{
+          transform: translateX(21px);
+          border-color: $red;
+        }
+      }
+    }
+  }
+  &__view{
+    height: 25px;
+    width: 45px;
+    border-radius: 15px;
+    background-color: $grey;
+    display: inline-block;
+    border: 1px solid darken($grey, 25%);
+    position: relative;
+    margin: 0 10px;
+    transition: all 0.5s ease;
+    &:before{
+      content: '';
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      border: 1px solid darken($grey, 25%);
+      background-color: $light;
+      position: absolute;
+      top: 0px;
+      left: -1px;
+      transition: all 0.5s ease;
+    }
+  }
+}

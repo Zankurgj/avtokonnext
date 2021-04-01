@@ -1,0 +1,4 @@
+mixin IconedLink(bem,data)
+    +b('iconed-link',bem, 'a')(href=data.url)
+        +Icon({},data.id)
+        +e('text')= data.text

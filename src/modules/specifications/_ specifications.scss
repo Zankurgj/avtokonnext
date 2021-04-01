@@ -1,0 +1,19 @@
+.specifications{
+  max-width: 540px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: list;
+  &__item{
+    padding: 30px 0;
+    border-bottom: 1px solid #cecece;
+    border-top: 1px solid #cecece;
+    margin-bottom: -1px;
+    &:before{
+      counter-increment: list;
+      content:counter(list)'.';
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}

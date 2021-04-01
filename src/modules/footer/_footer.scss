@@ -1,0 +1,41 @@
+.footer{
+  background-color: $grey;
+  color: $darkGrey;
+  position: relative;
+  z-index: 2;
+  &__share{
+    padding: 60px 0;
+  }
+  &__menu{
+    padding: 60px 0;
+    border-top: 2px solid transparentize($dark,0.8);
+    &-col{
+      margin: 0 15px;
+    }
+  }
+  &__copyright{
+    padding: 30px 0;
+    text-align: center;
+    border-top: 2px solid transparentize($dark,0.8);
+    p{
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      margin: 0;
+      margin-bottom: 14px;
+      padding: 0;
+      @include respond-to(md){
+        font-size: 16px;
+      }
+      @include respond-to(sm){
+        font-size: 14px;
+      }
+      @include respond-to(ss){
+        font-size: 12px;
+      }
+    }
+  }
+}

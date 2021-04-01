@@ -1,0 +1,5 @@
+mixin Specifications(bem,data)
+    +b('specifications',bem,'ol')
+        each item in data
+            +e('item')
+                | !{item}

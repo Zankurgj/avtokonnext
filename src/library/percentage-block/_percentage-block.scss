@@ -1,0 +1,75 @@
+.percentage-block{
+  max-width: 300px;
+  margin: 0 auto;
+  &__content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  &__percent{
+    font-size: 90px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    margin-right: 15px;
+    color: $red;
+    @include respond-to(md){
+      font-size: 60px;
+      margin-right: 10px;
+    }
+    @include respond-to(sm){
+      font-size: 40px;
+      margin-right: 5px;
+    }
+    @include respond-to(xs){
+      font-size: 30px;
+      margin-right: 5px;
+    }
+  }
+  &__tips{
+    font-size: 60px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $red;
+    @include respond-to(md){
+      font-size: 40px;
+    }
+    @include respond-to(sm){
+      font-size: 30px;
+    }
+    @include respond-to(xs){
+      font-size: 28px;
+    }
+  }
+  &__description{
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin-top: 20px;
+    @include respond-to(md){
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    @include respond-to(sm){
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    @include respond-to(xs){
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+}

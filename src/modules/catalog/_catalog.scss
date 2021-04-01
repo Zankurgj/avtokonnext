@@ -1,0 +1,45 @@
+.catalog{
+  &__list{
+    justify-content: flex-start;
+    margin-top: 60px;
+    @include respond-to(xs){
+      margin-top: 30px;
+    }
+    &-item{
+      width: calc(33.33% - 30px);
+      margin: 0 15px;
+      margin-bottom: 60px;
+      &.state_hidden{
+        display: none;
+      }
+      @include respond-to(sm){
+        width: calc(50% - 30px);
+      }
+      @include respond-to(xs){
+        width: calc(100% - 30px);
+      }
+      @include respond-to(xs){
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__head{
+    width: 100%;
+    .breadcrumbs{
+      margin-bottom: 15px;
+      margin-top: 60px;
+      @include respond-to(xs){
+        margin-top: 30px;
+      }
+    }
+    .heading{
+      margin-bottom: 60px;
+      @include respond-to(xs){
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__filter{
+    width: 100%;
+  }
+}

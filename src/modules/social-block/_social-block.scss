@@ -1,0 +1,75 @@
+.social-block{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &__list{
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &-item{
+      width: 36px;
+      height: 36px;
+
+    }
+  }
+  &__circle{
+    width: 5px;
+    height: 5px;
+    background: transparentize($darkGrey, 0.8);
+    border-radius: 50%;
+  }
+  &__link{
+    color: $darkGrey;
+    transition: opacity 0.5s ease;
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+  &__title{
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: $dark;
+    margin-right: 74px;
+    @include respond-to(md){
+      font-size: 18px;
+    }
+    @include respond-to(sm){
+      font-size: 16px;
+    }
+    @include respond-to(ss){
+      font-size: 14px;
+    }
+  }
+  @include respond-to(sm){
+    flex-wrap: wrap;
+    &__title{
+      margin-bottom: 30px;
+      width: 100%;
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+  @include respond-to(ss){
+    flex-wrap: wrap;
+    &__title{
+      margin-bottom: 30px;
+      width: 100%;
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+}

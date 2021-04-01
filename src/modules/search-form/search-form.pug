@@ -1,0 +1,7 @@
+mixin SearchForm(bem)
+    +b('search-form',{b:'js-search-form',m:bem.m},'form')(action = '/' method = 'GET')
+        +e('inner')
+            +e('input',{},'input')(placeholder='что ищем?' type = 'text' name = 'search' value = '')
+            +e('button',{b:'js-search-button'},'a')(href = "#")
+                +Icon({},'#symbol_search')
+                +Icon({},'#symbol_close')

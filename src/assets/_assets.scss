@@ -1,0 +1,124 @@
+@import "../../node_modules/node-normalize-scss/normalize";
+@import "../../node_modules/swiper/src/swiper";
+@import "../assets/fonts";
+@import "../assets/sprite";
+@import "../assets/gui";
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: $fntNormal;
+  font-size: 20px;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  @include respond-to(md){
+    font-size: 16px;
+  }
+  @include respond-to(sm){
+    font-size: 14px;
+  }
+  @include respond-to(ss){
+    font-size: 12px;
+  }
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  *{
+    box-sizing: border-box;
+  }
+  .page{
+    margin: 0 auto;
+    position: relative;
+  }
+  .main{
+    margin: 0 auto;
+    background-color: $light;
+    section{
+      &:first-child{
+        padding-top: 170px;
+        @include respond-to(ss){
+          padding-top: 90px;
+        }
+        @include respond-to(md){
+          padding-top: 90px;
+        }
+        @include respond-to(xs){
+          padding-top: 60px;
+        }
+
+      }
+    }
+  }
+  &.modal_show{
+    .page{
+      filter: blur(10px);
+    }
+  }
+}
+
+.svg-sprite {
+  display: none;
+}
+a{
+  text-decoration: none;
+  color: $dark;
+}
+.index-slider{
+  background-color: $light;
+}
+.index-text{
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @include respond-to(ss){
+    padding: 40px 0;
+  }
+}
+p{
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  @include respond-to(md){
+    font-size: 18px;
+  }
+  @include respond-to(sm){
+    font-size: 16px;
+  }
+  @include respond-to(ss){
+    font-size: 14px;
+  }
+  a{
+    color: $red;
+  }
+}
+.p-120{
+  padding-top: 120px!important;
+  padding-bottom: 120px!important;
+  @include respond-to(ss){
+    padding-top: 60px!important;
+    padding-bottom: 60px!important;
+  }
+}
+
+.p-90{
+  padding-top: 90px!important;
+  padding-bottom: 90px!important;
+  @include respond-to(ss){
+    padding-top: 30px!important;
+    padding-bottom: 30px!important;
+  }
+}
+
+.p-60{
+  padding-top: 60px!important;
+  padding-bottom: 60px!important;
+  @include respond-to(ss){
+    padding-top: 15px!important;
+    padding-bottom: 15px!important;
+  }
+}

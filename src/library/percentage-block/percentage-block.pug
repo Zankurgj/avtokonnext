@@ -1,0 +1,7 @@
+mixin PercentageBlock(bem,data)
+    +b('percentage-block',{m:bem.m, e:bem.e, b:'js-percentage-block'})(data-num= data.value)
+        +e('content')
+            +e('percent',{b:'js-percentage-block-percent'})= data.value
+            +e('tips')= data.tips
+        +e('description')
+            |!{data.text}

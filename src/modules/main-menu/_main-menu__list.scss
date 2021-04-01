@@ -1,0 +1,14 @@
+.main-menu__list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @include respond-to(sm){
+    flex-wrap: wrap;
+  }
+  @include respond-to(xs){
+    flex-wrap: wrap;
+  }
+}

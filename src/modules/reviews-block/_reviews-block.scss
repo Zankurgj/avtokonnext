@@ -1,0 +1,86 @@
+.reviews-block{
+  padding: 120px 0;
+    &__title{
+      width: 100%;
+      text-align: center;
+      .heading__title{
+        text-align: center;
+      }
+    }
+  &__info{
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $dark;
+    margin-bottom: 60px;
+    @include respond-to(xs){
+      margin-bottom: 30px;
+    }
+    @include respond-to(md){
+      font-size: 18px;
+    }
+    @include respond-to(sm){
+      font-size: 16px;
+    }
+    @include respond-to(ss){
+      font-size: 14px;
+    }
+    &-digit{
+      span{
+        &:first-child{
+          font-size: 60px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.8;
+          letter-spacing: normal;
+          text-align: left;
+          color: $red;
+          @include respond-to(md){
+            font-size: 35px;
+          }
+          @include respond-to(sm){
+            font-size: 24px;
+          }
+          @include respond-to(ss){
+            font-size: 18px;
+          }
+        }
+        &:last-child{
+          font-size: 38px;
+          font-weight: 600;
+          @include respond-to(md){
+            font-size: 24px;
+          }
+          @include respond-to(sm){
+            font-size: 18px;
+          }
+          @include respond-to(ss){
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &-text{
+      margin-top: 16px;
+    }
+  }
+  &__list{
+    &-item{
+      width: calc(33.33% - 30px);
+      margin-bottom: 30px;
+      @include respond-to(sm){
+        width: calc(50% - 30px);
+      }
+      @include respond-to(xs){
+        width: 100%;
+      }
+      @include respond-to(xs){
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

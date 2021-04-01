@@ -1,0 +1,9 @@
+mixin AdvantageItem(bem,data)
+    +b('advantage-item',{m:data.icon? 'iconed' : '',b:`${(bem.b? bem.b : '') + ' ' + (bem.m? 'advantage-item_'+bem.m : '')}`})
+        if data.icon
+            if String(data.icon).startsWith('#')
+                +HexIcon({e:'num'},{icon: data.icon}, 'solid')
+            else
+                +e('num',{m:'round'})= data.icon
+        +e('text')
+            | !{data.text}

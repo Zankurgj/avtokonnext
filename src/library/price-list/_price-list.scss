@@ -1,0 +1,128 @@
+.price-list{
+  .heading{
+    .heading__title{
+      font-size: 24px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      @include respond-to(md){
+        font-size: 18px;
+      }
+      @include respond-to(sm){
+        font-size: 16px;
+      }
+      @include respond-to(ss){
+        font-size: 14px;
+      }
+    }
+  }
+  &__price{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    @include respond-to(md){
+      font-size: 18px;
+    }
+    @include respond-to(sm){
+      font-size: 16px;
+    }
+    @include respond-to(ss){
+      font-size: 14px;
+    }
+    @include respond-to(xs){
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+    span{
+      font-size: 48px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.63;
+      letter-spacing: normal;
+      text-align: left;
+      color: $red;
+      @include respond-to(md){
+        font-size: 36px;
+      }
+      @include respond-to(sm){
+        font-size: 30px;
+      }
+      @include respond-to(ss){
+        font-size: 24px;
+      }
+    }
+  }
+  &__text{
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    @include respond-to(md){
+      font-size: 16px;
+    }
+    @include respond-to(sm){
+      font-size: 14px;
+    }
+    @include respond-to(ss){
+      font-size: 12px;
+    }
+  }
+  @include respond-to(ss){
+    font-size: 16px;
+  }
+  &_big {
+    @include respond-to(xs){
+      text-align: center;
+    }
+    .price-list {
+      &__price {
+        font-size: 48px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        font-weight: bold;
+        @include respond-to(md) {
+          font-size: 30px;
+        }
+        @include respond-to(sm) {
+          font-size: 28px;
+        }
+        @include respond-to(ss) {
+          font-size: 20px;
+        }
+        @include respond-to(xs) {
+          margin-bottom: 15px;
+          margin-top: 15px;
+        }
+
+        span {
+          font-size: 90px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.63;
+          letter-spacing: normal;
+          text-align: left;
+          color: $red;
+          @include respond-to(md) {
+            font-size: 70px;
+          }
+          @include respond-to(sm) {
+            font-size: 50px;
+          }
+          @include respond-to(ss) {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

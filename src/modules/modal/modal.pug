@@ -1,0 +1,5 @@
+mixin modal(bem)
+    +b('modal',bem)(data-modal='')&attributes(attributes)
+        +e('content',{b:'js-modal-content'})
+            if block
+                block

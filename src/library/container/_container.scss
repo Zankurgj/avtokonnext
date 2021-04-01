@@ -1,0 +1,80 @@
+.container{
+  max-width: 1400px;
+  width:100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media only screen and (max-width: 1440px) and (min-width: 1200px){
+    max-width: 1170px;
+  }
+  &_centered{
+    text-align: center;
+    .heading{
+      .heading__title{
+        text-align: center;
+      }
+    }
+    p{
+      text-align: center;
+    }
+
+  }
+  &__col{
+    margin: 0 15px;
+    max-width: calc(100% - 30px);
+    &-full,&_full{
+      width: calc(100% - 30px);
+    }
+    &-half,&_half{
+      width: calc(50% - 30px);
+      @include respond-to(xs){
+        width: calc(100% - 30px);
+      }
+    }
+    &_1{
+      width: calc(30% - 30px);
+      @include respond-to(xs){
+        width: calc(100% - 30px);
+      }
+    }
+    &_2{
+      width: calc(70% - 30px);
+      @include respond-to(xs){
+        width: calc(100% - 30px);
+      }
+    }
+    &_3{
+      width: calc(33.33% - 30px);
+      @include respond-to(ss){
+        width: calc(50% - 30px);
+      }
+      @include respond-to(xs){
+        width: calc(100% - 30px);
+      }
+    }
+  }
+  &_mb-120{
+    margin-bottom: 120px;
+    @include respond-to(sm){
+      margin-bottom: 60px;
+    }
+    @include respond-to(xs){
+      margin-bottom: 30px;
+    }
+  }
+  &_theme-grey{
+    background: $grey;
+    padding: 30px;
+    margin-bottom: 120px;
+    @include respond-to(sm){
+      margin-bottom: 90px;
+    }
+    @include respond-to(xs){
+      margin-bottom: 60px;
+    }
+  }
+}
+.centered{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}

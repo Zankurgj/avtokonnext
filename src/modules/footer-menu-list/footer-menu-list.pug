@@ -1,0 +1,18 @@
+mixin FooterMenuList(bem,data)
+    //menu list
+    +b('footer-menu-list',bem)
+        if data.title
+            if data.title.url
+                +e('title',{},'a')(href = data.title.url)= data.title.text
+            else
+                +e('title',{},'span')= data.title.text
+        +e('items',{},'ul')
+            each link in data.list
+                +e('link-item')
+                    if link.url
+                        a(href = link.url)
+                            |!{link.text}
+                    else
+                        span
+                            |!{link.text}
+    //end menu list

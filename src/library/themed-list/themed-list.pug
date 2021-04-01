@@ -1,0 +1,5 @@
+mixin ThemedList(bem,data)
+    +b('themed-list',bem,'ul')
+        each li in data
+            +e('li')
+                | !{li}

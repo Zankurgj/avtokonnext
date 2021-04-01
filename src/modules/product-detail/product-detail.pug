@@ -1,0 +1,119 @@
+mixin ProductDetail(bem)
+    +b('product-detail',{b:bem.b? bem.b : '' + ' '+ 'js-product-detail',m:bem.m,e:bem.e},'section')
+        +e('header',{b:'js-product-detail-header'})
+            +e('title',{b:'js-product-detail-title'})
+                +e('title-before',{b:'js-product-detail-title-before'})= 'Преимущества'
+                <!--вывести заголовки всех необходимых блоков-->
+                +Heading({},{titleSize:'2',title:"Основные сервисные функции",className:'js-product-detail-title-text'})(data-block='1')
+                +Heading({},{titleSize:'2',title:"Тревожные сигналы",className:'js-product-detail-title-text'})(data-block='2')
+                <!--end вывести заголовки всех необходимых блоков-->
+            +e('img-wrapper')
+                +e('img',{},'img')(src="images/product-img.png")
+        +e('wrapper-top')
+            +e('wrapper-top-right')
+                +Breadcrumbs({},{url:'#',title:'противоугонные комплексы'})
+                +Heading({},{titleSize: '1', title: "CobraConnex Rider Start"})
+                +rating({maxLength: 5, rating: 2.6})(readonly='readonly')
+                +e('wrapper-top-right-params',{b:'js-product-props'})
+                    +TextBlock({b: 'text-block_icon-inline text-block_icon-small'},{
+                        icon: '#symol_clock',
+                        title: 'Услуги 24/7'
+                    },1)
+                    +TextBlock({b: 'text-block_icon-inline text-block_icon-small'},{
+                        icon: '#symol_siren',
+                        title: 'тревожная кнопка'
+                    },1)
+                    +TextBlock({b: 'text-block_icon-inline text-block_icon-small'},{
+                        icon: '#symol_power-button',
+                        title: 'автозапуск'
+                    },1)
+                        +CustomCheckbox({m:'red'},{})(data-set-price='35 000*|40 000*')
+                p Спутниковая система CobraConnex Rider Start  предназначена для защиты современных автомобилей от угона. Система оповестит о попытках проникновения, определит местоположение автомобиля в случае угона. Функция автозапуска двигателя делает систему более комфортной для автовладельца.
+            +e('wrapper-top-left')
+                +Heading({},{titleSize: '2', title: "Рекомендованная розничная цена"})
+                +e('wrapper-top-left-price')
+                    span.js-set-price
+                        | 35 000*
+                    | руб
+                +e('wrapper-top-left-description')
+                    p
+                        | *Цена действительна в Москве и Московской области. Подробную информацию о стоимости продуктов и услуг в Вашем городе, Вы можете уточнить у регионального представителя. Телефоны указаны в разделе <a href="#">Контакты</a>
+                +Button({m: 'theme-red'},{text: 'Оставить заявку', selector: 'a'})(href="#" data-show-modal='form1' data-form-theme='dsfdsfsd')
+        +e('wrapper')
+            +e('inner')
+                +e('wrapper-item',{b: 'js-product-props'})(data-title="1")
+                    .container
+                        .container__row
+                            +Heading({},{titleSize:'2',title:"Основные сервисные функции",className:'js-product-detail-title-text'})
+                            +e('wrapper-item-left',{b: 'container__col'})
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Сеть диспетчерских центров в Европе'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Аккредитация правоохранительными органами'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Сеть диспетчерских центров в Европе'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Аккредитация правоохранительными органами'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Сеть диспетчерских центров в Европе'
+                                },1)
+                            +e('wrapper-item-right',{b: 'container__col'})
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Сеть диспетчерских центров в Европе'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Аккредитация правоохранительными органами'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Сеть диспетчерских центров в Европе'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Аккредитация правоохранительными органами'
+                                },1)
+                +e('wrapper-item',{b:'js-product-props'})(data-title="2")
+                    .container
+                        .container__row
+                            +Heading({},{titleSize:'2',title:"Тревожные сигналы",className:'js-product-detail-title-text'})
+                            +e('wrapper-item-left',{b:'container__col'})
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: 'https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png',
+                                    title: 'Сеть диспетчерских центров в Европе'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Аккредитация правоохранительными органами'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Сеть диспетчерских центров в Европе'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Аккредитация правоохранительными органами'
+                                },1)
+                            +e('wrapper-item-right',{b:'container__col'})
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Сеть диспетчерских центров в Европе'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Аккредитация правоохранительными органами'
+                                },1)
+                                +TextBlock({b: 'text-block_icon-inline'},{
+                                    icon: '#symol_siren',
+                                    title: 'Сеть диспетчерских центров в Европе'
+                                },1)

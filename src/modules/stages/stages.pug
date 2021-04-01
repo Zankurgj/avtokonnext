@@ -1,0 +1,10 @@
+mixin Stages(bem,data)
+    +b('stages',bem)
+        +e('list',{b:'js-stages-list'},'ul')
+            each item in data
+                +e('item',{b:'js-stages-item'})
+                    +e('year')= item.year
+                    +e('text')
+                        | !{item.text}
+        +e('button')
+            +Button({m: 'theme-red',b:'js-stage-more'},{selector: 'a', text: 'Развернуть'})(href='#')

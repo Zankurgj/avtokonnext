@@ -1,0 +1,162 @@
+mixin ContactsMap(bem)
+    +b('contacts-map',bem,'section')&attributes(attributes)
+        +e('wrapper',{b:'container'})
+            +e('inner',{b:'container__row'})
+                +e('head',{b:"container__col container__col_full"})
+                    +Breadcrumbs({},{url: '#', title: 'вернуться на главную'})
+                +e('left',{b:'container__col container__col_1'})
+                    +Heading({},{titleSize:1,title:'Контакты'})
+                +e('right',{b:'container__col container__col_2'})
+                    +e('select')
+                        label
+                            | Выберете ближайшее к вам место:
+                            select.c-input.c-input_theme-square(name='city' data-city)
+                                option(value="0" selected="selected" )
+                                    | Москва
+                                option(value="1" )
+                                    | 1
+                                option(value="2" )
+                                    | 2
+                                option(value="3" )
+                                    | 3
+                +e('left',{b: 'container__col container__col_1'})
+                    +e('map-detail',{b: 'js-map-detail'})
+                        +ContactItem({m:'type-main'},{
+                            title:'Центральный офис',
+                            address:'119334, Россия, г. Москва, 5-й Донской проезд, д. 19',
+                            list:[
+                                {
+                                    title:'Единый Информационный Центр: ',
+                                    list:[
+                                        '<a href="tel:88001001911">8  800  100 19 11</a>' ,
+                                        '<a href="tel:+74959211911">+7 (495) 921 19 11</a>' ,
+                                        '<a href="tel:+74957390490">+7 (495) 739 04 90</a>'
+                                    ]
+                                },
+                                {
+                                    title: 'Электронный адрес клиентской службы:',
+                                    list: [
+                                        '<a href="mailto:ko@autoconnex.ru ">ko@autoconnex.ru </a>'
+                                    ]
+                                }
+                            ]
+                        })
+                        +ContactItem({m: 'type-main'},{
+                            title: 'Москва',
+                            address: '119334, Россия, г. Москва, 5-й Донской проезд, д. 19',
+                            list: [
+                                {
+                                    title: 'Единый Информационный Центр: ',
+                                    list: [
+                                        '<a href="tel:88001001911">8  800  100 19 11</a>',
+                                        '<a href="tel:+74959211911">+7 (495) 921 19 11</a>',
+                                        '<a href="tel:+74957390490">+7 (495) 739 04 90</a>'
+                                    ]
+                                },
+                                {
+                                    title: 'Электронный адрес клиентской службы:',
+                                    list: [
+                                        '<a href="mailto:ko@autoconnex.ru ">ko@autoconnex.ru </a>'
+                                    ]
+                                }
+                            ]
+                        })
+                +e('right',{b: 'container__col container__col_2'})
+                    +e('map-container')
+                        +e('map-content')(
+                            id='contact-map'
+                            data-lang="ru_RU"
+                            data-api-key="586ddf2e-b996-4e90-8462-3652b2e3f474"
+                            data-api="ajax/contacts.json"
+                            data-detail-api="ajax/contacts-detail.json"
+                            )
+                +e('bottom',{b:"container__col container__col_full"})
+                    +Heading({},{titleSize:2,title:'Центр оперативного реагирования'})
+                    +b('text-block')
+                        p
+                            | Телефоны служб реагирования доступны 24/7
+                    +b('container__row')
+                        +ContactItem({m:'type-bottom',b:'container__col'},{
+                            title: 'CobraConnex: ',
+                            list: [
+                                {
+                                    list: [
+                                        '<a href="tel:88001001911">+7 (495) 502 90 80</a>',
+                                        '<a href="tel:+74959211911">+7 (495) 502 90 80</a>'
+
+                                    ]
+                                },
+                            ]
+                        })
+                        +ContactItem({m:'type-bottom',b:'container__col'},{
+                            title: 'Aston Martin Tracking System: ',
+                            list: [
+                                {
+                                    list: [
+                                        '<a href="tel:88001001911">+7 (495) 775 25 55</a>',
+                                        '<a href="tel:+74959211911">+7 (495) 730 00 02</a>',
+                                        '<a href="tel:+74957390490">8 800 700 09 11</a>'
+                                    ]
+                                },
+                            ]
+                        })
+                        +ContactItem({m:'type-bottom',b:'container__col'},{
+                            title: 'Audi Tracking Assistant plus: ',
+                            list: [
+                                {
+                                    list: [
+                                        '<a href="tel:88001001911">+7 (495) 644 45 00</a>',
+                                        '<a href="tel:+74959211911">+7 (495) 780 52 22</a>',
+                                        '<a href="tel:+74957390490">8 800 700 99 11</a>'
+                                    ]
+                                },
+                            ]
+                        })
+                        +ContactItem({m:'type-bottom',b:'container__col'},{
+                            title: 'Infiniti Tracking System: ',
+                            list: [
+                                {
+                                    list: [
+                                        '<a href="tel:88001001911">+7 (495) 725 27 00</a>',
+                                        '<a href="tel:+74959211911">+7 (495) 739 04 94</a>',
+                                        '<a href="tel:+74957390490">8 800 100 99 45</a>'
+                                    ]
+                                },
+                            ]
+                        })
+                        +ContactItem({m:'type-bottom',b:'container__col'},{
+                            title: 'Porsche Vehicle Tracking System / Porsche Car',
+                            list: [
+                                {
+                                    list: [
+                                        '<a href="tel:88001001911">+7 (495) 775 25 55</a>',
+                                        '<a href="tel:+74959211911">+7 (495) 730 00 02</a>',
+                                        '<a href="tel:+74957390490">8 800 700 09 11</a>'
+                                    ]
+                                },
+                            ]
+                        })
+                        +ContactItem({m:'type-bottom',b:'container__col'},{
+                            title: 'Телефоны голосового информирования:',
+                            list: [
+                                {
+                                    list: [
+                                        '<a href="tel:88001001911">+7 (499) 271 04 91\n</a>',
+                                        '<a href="tel:+74959211911">+7 (495) 967 15 36</a>'
+
+                                    ]
+                                },
+                            ]
+                        })
+                        +ContactItem({m:'type-bottom',b:'container__col'},{
+                            title: 'Bentley Navtrak:',
+                            list: [
+                                {
+                                    list: [
+                                        '<a href="tel:+7 (495) 644 45 00\n">+7 (495) 644 45 00</a>',
+                                        '<a href="tel:+7 (495) 780 52 22">+7 (495) 780 52 22</a>',
+                                        '<a href="tel:8 800 700 99 11">8 800 700 99 11</a>'
+                                    ]
+                                },
+                            ]
+                        })

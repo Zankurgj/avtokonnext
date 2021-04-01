@@ -1,0 +1,4 @@
+mixin ClientsList(bem,data)
+    +b('clients-list',bem,'ul')
+        each item in data
+            +Client({},{img:item.img})

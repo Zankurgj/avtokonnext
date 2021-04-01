@@ -1,0 +1,13 @@
+mixin Tabs(bem,category,active,notshowAll,href)
+    -activeNum= active? active : 0
+    -i=0
+    +b('tabs',{b: 'js-tabs',m:bem.m}, 'ul')
+        if !notshowAll
+            +e('item',{b:`js-tabs-link ${(activeNum===0)? 'state_active':''}`})(data-id='all' data-href=`${href? href : '/catalog.html'}`)
+                | Все товары
+        else
+            -activeNum++
+        each item, key in category
+            +e('item',{b:`js-tabs-link ${(activeNum-1 === i && activeNum!==0)? 'state_active':''}`})(data-id=key, data-href=`${href? href+'?id='+key : '/catalog.html?id='+key}`)
+                | !{item}
+                -i++

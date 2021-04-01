@@ -1,0 +1,84 @@
+.about-head{
+  background: $grey url("../images/background-main.png") no-repeat center;
+  background-size: cover;
+  padding-bottom: 60px;
+  @include respond-to(ss){
+    padding-bottom: 30px;
+  }
+  p{
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    @include respond-to(md){
+      font-size: 18px;
+    }
+    @include respond-to(sm){
+      font-size: 16px;
+    }
+    @include respond-to(ss){
+      font-size: 14px;
+    }
+    @include respond-to(xs){
+      margin-bottom: 15px;
+    }
+  }
+  .heading{
+    margin-bottom: 30px;
+    @include respond-to(xs){
+      margin-bottom: 15px;
+    }
+
+  }
+  &__content{
+    padding-top: 60px;
+    @include respond-to(ss){
+      padding:30px 0;
+    }
+  }
+  .heading_size-h2 .heading__title {
+    font-size: 36px;
+    line-height: normal;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    @include respond-to(md){
+      font-size: 24px;
+    }
+    @include respond-to(sm){
+      font-size: 18px;
+    }
+    @include respond-to(ss){
+      font-size: 16px;
+    }
+    @include respond-to(xs){
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  &__advantage-list{
+    flex-wrap: nowrap;
+    .advantage-item{
+      margin-bottom: 30px;
+      @include respond-to(xs){
+        margin-bottom: 15px;
+      }
+    }
+    @include respond-to(sm){
+      flex-wrap: wrap;
+      .advantage-item{
+        width: calc(50% - 30px);
+      }
+    }
+    @include respond-to(ss){
+      flex-wrap: wrap;
+      .advantage-item{
+        width: 100%;
+      }
+    }
+  }
+}

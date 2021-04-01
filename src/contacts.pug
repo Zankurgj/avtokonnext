@@ -1,0 +1,49 @@
+extends blocks/layout
+
+block data
+
+    - const page = {name:'index',title: 'contacts'};
+
+
+block content
+
+    +ContactsMap({})
+    +b('container',{m:'theme-grey'})
+        +b('form',{b: 'js-ajax-form'},'form')(method="POST", action="ajax/test.json")
+            +b('container__row',{m:'left'})
+                    +b('container__col',{m: 'full'})
+                        +Heading({},{titleSize: 2, title: 'Обратная связь'})
+                        +b('text-block')
+                            | Напиши ваш вопрос/предложение и заполните данные для связи
+                    +b('container__col',{m: '3'})
+                        label
+                            span
+                                | Ваше Имя *
+                            +Input({m: 'theme-square'})(value="" name='name' required='required')
+                        label
+                            span
+                                | Название компании
+                            +Input({m: 'theme-square'})(value="" name='company')
+
+                    +b('container__col',{m: '3'})
+                        label
+                            span
+                                | Ваш телефон *
+                            +Input({m: 'theme-square'})(value="" data-phone name='name' required='required')
+                        label
+                            span
+                                | Город
+                            +Input({m: 'theme-square'})(value="" name='city')
+                    +b('container__col',{m: '3'})
+                        label
+                            span
+                                | Сообщение / вопрос *
+                            +b('c-input',{m: 'theme-square',b:'full-textarea'})
+                                +e('field',{},'textarea')(name='question')= ''
+                    +b('container__col',{b:'centered'})
+
+                        +Button({m: 'theme-red'},{selector: 'button', text: 'Оставить заявку'})(type='submit')
+                    +b('container__col',{m: '2',b:'centered'})
+                        +b('text-block',{m: 'full'})
+                            p
+                                | * - поля, обязательные к заполнению. <br> Нажимая кнопку “Отправить сообщение” вы даете согласие на обработку своих персональных данныx <br> <a href="#" target="_blank">Политика конфиденциальности</a>

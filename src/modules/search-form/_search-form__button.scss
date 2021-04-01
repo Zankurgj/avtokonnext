@@ -1,0 +1,39 @@
+.search-form__button{
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  margin-left: -30px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  &:focus,&:active{
+    outline: none;
+  }
+  .icon{
+    position: absolute;
+    transition: all 0.5s ease;
+    top: 0;
+    width: 23px;
+    height: 100%;
+    &:first-child{
+      top: 0;
+    }
+    &:last-child{
+      top: 30px
+    }
+  }
+  &.state_close{
+    .icon{
+      transition: all 0.5s ease;
+      top: 0;
+      &:first-child{
+        top: -30px
+      }
+      &:last-child{
+        top: 0;
+      }
+    }
+  }
+}

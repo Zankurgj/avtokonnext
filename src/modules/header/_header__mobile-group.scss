@@ -1,0 +1,38 @@
+.header__mobile-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 26px;
+  transition: right 0.5s ease;
+  @include respond-to(md){
+    font-size: 18px;
+  }
+  @include respond-to(sm){
+    font-size: 18px;
+  }
+  @include respond-to(ss){
+    font-size: 16px;
+  }
+  @include respond-to(md){
+    justify-content: flex-end;
+  }
+
+  @include respond-to(ss){
+    position: fixed;
+    z-index: 300;
+    flex-wrap: wrap;
+    height: calc(100vh - 59px);
+    top: 59px;
+    max-width: 320px;
+    background: $light;
+    right: -321px;
+    padding: 30px 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &.state_active{
+    right: 0!important;
+  }
+}

@@ -1,0 +1,11 @@
+.asn{
+  padding: 120px 0;
+  @include respond-to(ss){
+    padding: 60px 15px;
+  }
+  img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+}

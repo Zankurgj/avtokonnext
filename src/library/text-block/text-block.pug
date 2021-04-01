@@ -1,0 +1,14 @@
+mixin TextBlock(bem,data,bordered)
+    -borderedClass = `${bordered? 'text-block_bordered-icon' : ''}`
+    +b('text-block',{b: borderedClass + `  ${bem.b? bem.b : ''}`, e:bem.e, m:bem.m? bem.m: ''})
+        if data.icon
+            +e('icon')
+                +HexIcon({},{icon:data.icon},bordered?  '' : 'solid')
+        if data.title
+            +e('title')
+                +Heading({},{titleSize:'3',title:data.title})
+        if data.text
+            +e('text')
+                | !{data.text}
+        if block
+            block

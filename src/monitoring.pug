@@ -1,0 +1,129 @@
+extends blocks/layout
+
+block data
+
+    - const page = {name:'index',title: 'monitoring'};
+
+
+block content
+    +HeaderBanner({m:'theme-contain'},{
+        title:'Спутниковый мониторинг  транспорта (ГЛОНАСС/GPS)',
+        text:'Полный комплекс функций, необходимых современной организациидля управления автопарком предприятия любого масштаба.',
+        img:'images/manitoring_banner_bg.jpg'
+    })
+        +Button({m:'theme-light'},{selector:'a',text:'Демо-версия'})(href="#")
+        +Button({m:'theme-red'},{selector:'a',text:'заявка на подключение'})(href="#" data-show-modal='form1' data-form-theme='dsfdsfsd')
+    +b('container')
+        +b('container__row')
+            +b('container__col',{m:'full'})
+                +Tabs({m:'theme-stretch'},{
+                    cobra:'Кобра мониторинг',
+                    cobraplus:'Кобра мониторинг +',
+                    germetic:'Комплект герметичность',
+                    canMonitorng:'Мониторинг can'
+                },0,true,'/monitoring.html')
+            +b('container__col',{m: 'full'})
+                div(data-category-id='cobra')
+                    +b('container__row',{b:'p-90'})
+                        +b('container__col',{m: 'full'})
+                            +MonitoringCattegorySample()
+                div(data-category-id='cobraplus')
+                    +b('container__row',{b:'p-90'})
+                        +b('container__col',{m: 'full'})
+                            +MonitoringCattegorySample()
+                div(data-category-id='germetic')
+                    +b('container__row',{b:'p-90'})
+                        +b('container__col',{m: 'full'})
+                            +MonitoringCattegorySample()
+                div(data-category-id='canMonitorng')
+                    +b('container__row',{b:'p-90'})
+                        +b('container__col',{m: 'full'})
+                            +MonitoringCattegorySample()
+    +b('info-block',{m:'theme-grey',b:"p-60"})
+        +b('container')
+            +b('container__row')
+                +b('container__col',{m: 'full'})
+                    +Heading({},{
+                        titleSize: 2,
+                        title: 'Стоимость комплекта'
+                    })
+                    +b('text-block')
+                        p
+                            | Обратите внимание, что стоимость комплекта является индикативной и может отличаться в разлиных регионах. <br> Указаные цены ни при каких обстоятельствах не являются публичной офертой.
+
+                    +b('call-form__form',{m:'short'})(data-category-id='cobra')
+                        +PriceList({m:'big'},{price:'<span>17.500</span> руб.'})
+                        +Button({m: 'theme-light'},{selector: 'a', text: 'Демо-версия'})(href="#")
+                        +Button({m: 'theme-red'},{
+                                selector: 'a',
+                                text: 'заявка на подключение'
+                            })(href="#" data-show-modal='form1' data-form-theme='dsfdsfsd')
+                    +b('call-form__form',{m:'short'})(data-category-id='cobraplus')
+                        +PriceList({m:'big'},{price: '<span>18.500</span> руб.'})
+                        +Button({m: 'theme-light'},{selector: 'a', text: 'Демо-версия'})(href="#")
+                        +Button({m: 'theme-red'},{
+                            selector: 'a',
+                            text: 'заявка на подключение'
+                        })(href="#" data-show-modal='form1' data-form-theme='dsfdsfsd')
+                    +b('call-form__form',{m:'short'})(data-category-id='germetic')
+                        +PriceList({m:'big'},{price: '<span>19.500</span> руб.'})
+                        +Button({m: 'theme-light'},{selector: 'a', text: 'Демо-версия'})(href="#")
+                        +Button({m: 'theme-red'},{
+                            selector: 'a',
+                            text: 'заявка на подключение'
+                        })(href="#" data-show-modal='form1' data-form-theme='dsfdsfsd')
+                    +b('call-form__form',{m:'short'})(data-category-id='canMonitorng')
+                        +PriceList({m:'big'},{price: '<span>20.500</span> руб.'})
+                        +Button({m: 'theme-light'},{selector: 'a', text: 'Демо-версия'})(href="#")
+                        +Button({m: 'theme-red'},{
+                            selector: 'a',
+                            text: 'заявка на подключение'
+                        })(href="#" data-show-modal='form1' data-form-theme='dsfdsfsd')
+
+
+
+                    +b('text-block')
+                            p
+                                |<strong>Акция!</strong>  Скидка -5% при подключении до 01.01.2020. Подробнее по телефону 8 800 100 19 11
+    +b('container',{b:'p-90'})
+        +b('container__row')
+            +b('container__col',{m: 'full'})
+                +Heading({},{
+                    titleSize: 2,
+                    title: 'Наши клиенты'
+                })
+            +b('container__col',{m: 'full'})
+                +ClientsList({},[
+                    {img: 'images/63.png'},
+                    {img: 'images/64.png'},
+                    {img: 'images/65.png'},
+                    {img: 'images/66.png'},
+                    {img: 'images/69.png'},
+                    {img: 'images/63.png'},
+                    {img: 'images/64.png'},
+                    {img: 'images/65.png'},
+                    {img: 'images/66.png'},
+                    {img: 'images/69.png'}
+                ])
+    +b('info-block',bem,'section')
+        +e('wrapper',{b: "container"})
+            +e('inner',{b: "container__row"})
+                +e('col',{m: 'img'})
+                    +e('img',{},'img')(src="images/phone.jpg")
+                +e('col',{m: 'text'})
+                    +e('title') Мобильные приложения
+                    +Heading({m: "theme-red-lined"},{
+                        titleSize: '2',
+                        title: 'Разработаны специально\n' +
+                            'для противоугонных \n' +
+                            'систем АВТОКОННЕКС'
+                    })
+                    p Контролируйте Ваш автомобиль прямо с экрана Вашего смартфона, независимо от операционной системы iOS или Android.
+                    +ReadMore({},{url: '#', title: 'Инструкции'})
+                    +e('apps')
+                        +Button({m: 'theme-grey', b: 'c-button_type-iconed'},{selector: 'a'})(href="#")
+                            +Icon({},'#symbol_appstore')
+                        +Button({m: 'theme-grey', b: 'c-button_type-iconed'},{selector: 'a'})(href="#")
+                            +Icon({},'#symbol_google-play')
+
+    +CallForm()

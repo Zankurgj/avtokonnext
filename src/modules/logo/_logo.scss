@@ -1,0 +1,26 @@
+.logo{
+  position: relative;
+  img{
+    height: 60px;
+    width: auto;
+    @include respond-to(md){
+      max-height: 45px;
+    }
+    @include respond-to(sm){
+      max-height: 45px;
+    }
+    @include respond-to(xs){
+      max-height: 25px;
+    }
+  }
+  @include respond-to(md){
+    margin-right: 0;
+  }
+  @include respond-to(sm){
+    max-height: 45px;
+  }
+  @include respond-to(xs){
+    max-height: 35px;
+    margin-right: 0;
+  }
+}

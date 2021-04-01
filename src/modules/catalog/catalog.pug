@@ -1,0 +1,25 @@
+mixin Catalog(bem,data)
+    +b('catalog',bem,'section')
+        +e('wrapper',{b:'container'})
+            +e('inner',{b:'container__row'})
+                +e('head',{b:'container__col'})
+                    +Breadcrumbs({},{url:'#',title:'вернуться на главную'})
+                    +Heading({},{titleSize:1,title:'Противоугонные комплексы АВТОКОННЕКС'})
+                +e('filter',{b:'container__col js-catalog-filter'})
+                    -category = {}
+                    each item in data
+                        if !category[item.category.id]
+                            -category[item.category.id] = item.category.name
+                    +Tabs({},category,0)
+            +e('list',{b:'container__row'})
+                each product in data
+                    +ProductItem({b:'catalog__list-item'},{
+                                type:product.category.name,
+                                name:product.name,
+                                img:product.img,
+                                rating: product.rating,
+                                propsType:product.propsType,
+                                props:product.props,
+                                url:'#',
+                                propsBefore: product.propsBefore
+                            })(data-category-id=product.category.id)

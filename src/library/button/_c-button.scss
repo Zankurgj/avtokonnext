@@ -1,0 +1,74 @@
+.c-button{
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-align: center;
+  border-radius: 30px;
+  padding: 19px 36px;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  border: 1px solid transparent;
+  transform: scale(1) translateZ(0);
+  @include respond-to(md){
+    font-size: 14px;
+    padding: 14px 25px;
+  }
+  @include respond-to(sm){
+    font-size: 14px;
+    padding: 14px 25px;
+  }
+  @include respond-to(ss){
+    font-size: 14px;
+    padding: 14px 25px;
+  }
+  &:active{
+    transition: none;
+    transform: scale(0.95) translateZ(0);
+  }
+  &:hover{
+    border-color: currentColor;
+  }
+  &_theme-red{
+    background: $red;
+    color: $light;
+    &:hover{
+      background: transparent;
+      color: $red;
+    }
+  }
+  &_theme-light{
+    background: $light;
+    color: $darkGrey;
+    border-color: $grey;
+    &:hover{
+      background: $red;
+      color: $light;
+    }
+  }
+  &_theme-grey{
+    background: $darkGrey;
+    color: $light;
+    &:hover{
+      background: transparent;
+      color: $darkGrey;
+    }
+  }
+  &_type-iconed{
+    padding-top: 0;
+    padding-bottom: 0;
+    min-width: auto;
+    .icon{
+      display: inline-block;
+      height: 60px;
+      padding: 5px 0;
+      max-width: 200px;
+    }
+  }
+  &:active,&:focus{
+    outline: none;
+  }
+}

@@ -1,0 +1,236 @@
+.main-slider{
+  position: relative;
+  margin-bottom: 60px;
+  .swiper-wrapper{
+    min-height: 100%;
+  }
+  .c-button{
+    &.c-button_theme-red{
+      &:hover{
+        background-color: $light;
+        color: $red;
+      }
+    }
+  }
+  @include respond-to(xs){
+    margin-bottom: 30px;
+  }
+  &_theme-index{
+    background: url("../images/main-slider-bg.jpg") no-repeat center;
+    background-size: cover;
+    .main-slider__item-title{
+      &:after{
+        content:'';
+        background: $red;
+        width: 197px;
+        height: 2px;
+        display: block;
+        margin-top: 38px;
+      }
+    }
+  }
+
+  &__item{
+    padding-top: 60px;
+    padding-bottom: 120px;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: auto!important;
+    &:first-child{
+      display: block;
+    }
+    @include respond-to(ss){
+      padding-top: 30px;
+      padding-bottom: 30px;
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: transparentize($light,0.25);
+        z-index: 0;
+      }
+      &-inner{
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparentize($light,0.33);
+  }
+  &__wrapper{
+    position: relative;
+    &:before,&:after{
+      content:'';
+      border: 1px solid $light;
+      display: block;
+      position: absolute;
+      bottom: 160px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: mouse 3s ease-out infinite;
+      transition: opacity 0.5s ease;
+      z-index: 300;
+      @include respond-to(960px){
+        content: none;
+      }
+    }
+    &:before{
+      width: 50px;
+      height: 87px;
+      border-radius: 30px;
+      @include respond-to(md){
+        width: 40px;
+        height: 60px;
+      }
+    }
+    &:after{
+      border-width: 1px;
+      width: 0;
+      height: 5px;
+      transform: translateY(-60px) translateX(-50%);
+      opacity: 0.7;
+      @include respond-to(md){
+        transform: translateY(-40px) translateX(-50%);
+      }
+    }
+    &.state_scroll{
+      &:before,&:after{
+        opacity: 0;
+      }
+    }
+  }
+  &__item-title{
+    font-size: 48px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: $dark;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    @include respond-to(md){
+      font-size: 26px;
+    }
+    @include respond-to(sm){
+      font-size: 24px;
+    }
+    @include respond-to(ss){
+      font-size: 18px;
+    }
+    @include respond-to(xs){
+      margin-bottom: 15px;
+    }
+  }
+  &__item-text{
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: transparentize($dark,0.4);
+    margin-bottom: 60px;
+    padding: 0 10px;
+    @include respond-to(md){
+      font-size: 18px;
+    }
+    @include respond-to(sm){
+      font-size: 16px;
+    }
+    @include respond-to(ss){
+      font-size: 14px;
+    }
+    @include respond-to(xs){
+      margin-bottom: 30px;
+    }
+
+  }
+  &__nav-wrapper{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    &-arrows{
+      position: absolute;
+      bottom:37px;
+      right: 70px;
+      @include respond-to(ss){
+        display: none;
+      }
+      .hex-icon{
+        width: 80px;
+        height: 80px;
+        @include respond-to(md){
+          width: 60px;
+          height: 60px;
+        }
+        &:focus,&:active{
+          outline: none;
+        }
+        transition: all 0.5s ease;
+        transform: translateZ(0) scale(1);
+        cursor: pointer;
+        display: inline-block;
+        .hex-icon__bg{
+          color: $light;
+          transition: all 0.5s ease;
+        }
+        .icon{
+          color: $red;
+          transition: all 0.5s ease;
+        }
+        &:hover{
+          .hex-icon__bg{
+            color: $red;
+          }
+          .icon{
+            color: $light;
+          }
+        }
+        &:active{
+          transform: translateZ(0) scale(0.9);
+          transition: none;
+        }
+      }
+    }
+    &-dots{
+      position: absolute;
+      left: 0;
+      bottom: -49px;
+      width: 100%;
+      text-align: center;
+      .swiper-pagination-bullet{
+        display: inline-block;
+        transition: all 0.5s ease;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 5px;
+        background: transparentize($dark,0.5);
+        &-active{
+          background: $red;
+        }
+      }
+    }
+  }
+
+
+}

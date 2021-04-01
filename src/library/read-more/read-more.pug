@@ -1,0 +1,4 @@
+mixin ReadMore(bem,data)
+    +b('read-more',bem,'a')(href= data.url)
+        span= data.title
+        +Icon({},'#symbol_left-arr')

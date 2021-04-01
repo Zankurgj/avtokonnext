@@ -1,0 +1,157 @@
+extends blocks/layout
+
+block data
+
+    - const page = {name:'index',title: 'Главная'};
+
+
+block content
+    +MainSlider({m: 'theme-index'},[
+        {
+            title: 'Производитель и установщик <br>' +
+                'АСН-терминала ГЛОНАСС <br>' +
+                'согласно Постановлению <br>' +
+                'Правительства №153',
+            text: 'Официальный представитель международной компании <br>' +
+                'Vodafone Automotive Technologies',
+            img: 'images/mainslide-slide1.png',
+            button: {
+                text: 'Оставить заявку',
+                link: '#'
+            }
+        },
+        {
+            title: 'Производитель и установщик <br>' ,
+            text: 'Официальный представитель международной компании <br>' +
+                'Vodafone Automotive Technologies',
+            img: 'images/mainslide-slide1.png',
+            button: {
+                text: 'Оставить заявку',
+                link: '#'
+            }
+        },
+        {
+            title: 'Производитель и установщик <br>',
+            text: 'Официальный представитель международной компании <br>',
+            button: {
+                text: 'Оставить заявку',
+                link: '#'
+            }
+        },
+        {
+            title: 'Производитель и установщик <br>' +
+                'АСН-терминала ГЛОНАСС <br>' +
+                'согласно Постановлению <br>' +
+                'Правительства №153',
+            text: 'Официальный представитель международной компании <br>' +
+                'Vodafone Automotive Technologies',
+            img: 'images/mainslide-slide1.png',
+            button: {
+                text: 'Оставить заявку',
+                link: '#'
+            }
+        },
+        {
+            title: 'Производитель и установщик <br>' +
+                'АСН-терминала ГЛОНАСС <br>' +
+                'согласно Постановлению <br>' +
+                'Правительства №153',
+            text: 'Официальный представитель международной компании <br>' +
+                'Vodafone Automotive Technologies',
+            img: 'images/mainslide-slide1.png',
+            button: {
+                text: 'Оставить заявку',
+                link: '#'
+            }
+        },
+        {
+            title: 'Производитель и установщик <br>' +
+                'АСН-терминала ГЛОНАСС <br>' +
+                'согласно Постановлению <br>' +
+                'Правительства №153',
+            text: 'Официальный представитель международной компании <br>' +
+                'Vodafone Automotive Technologies',
+            img: 'images/mainslide-slide1.png',
+            button: {
+                text: 'Оставить заявку',
+                link: '#'
+            }
+        }
+    ])
+
+    +b('index-slider',{})(data-slides-count = 4)
+        +Slider({m: 'theme-fade'},[
+            {
+                img: 'images/slide1.jpg',
+                title: 'АСН-терминал ГЛОНАСС',
+                text: '',
+                color: 'white'
+            },
+            {
+                img: '',
+                title: 'Системы мониторинга',
+                text: 'Надежный контроль вашего автопарка',
+                color: ''
+            },
+            {
+                img: 'images/slide3.png',
+                title: 'Владельцам Porsche',
+                text: '',
+                color: 'white'
+            },
+            {
+                img: '',
+                title: 'Мобильные приложения',
+                text: 'Для платформы ANDROID и телефонов iPhone',
+                color: ''
+            },
+            {
+                img: 'images/slide1.jpg',
+                title: 'АСН-терминал ГЛОНАСС',
+                text: '',
+                color: 'white'
+            },
+            {
+                img: '',
+                title: 'Системы мониторинга',
+                text: 'Надежный контроль вашего автопарка',
+                color: ''
+            },
+            {
+                img: 'images/slide3.png',
+                title: 'Владельцам Porsche',
+                text: '',
+                color: 'white'
+            },
+            {
+                img: '',
+                title: 'Мобильные приложения',
+                text: 'Для платформы ANDROID и телефонов iPhone',
+                color: ''
+            }
+        ])
+    +InfoBlock()
+    +b('index-text',{},'section')
+        +e('wrapper',{b: 'container'})
+            +e('inner',{b: 'container__row'})
+                +e('item',{b: 'container__col'})
+                    +TextBlock({},{
+                        icon: "#symbol_fleur",
+                        title: 'Заголовок раскрывающий смысл сказанного',
+                        text: "Vodafone Automotive Technologies (до 31 марта 2015 года, Cobra AT) — один из мировых лидеров в сфере интегрированных решений по обеспечению безопасности транспортных средств, а так же предотвращению и управлению рисками, связанными с транспортными средствами, такими как: угоны, разбойные нападения и мошенничество."
+                    })
+                +e('item',{b: 'container__col'})
+                    +TextBlock({},{
+                        icon: "#symbol_fleur", title: 'Заголовок раскрывающий смысл сказанного',
+                        text: "Vodafone Automotive Technologies (до 31 марта 2015 года, Cobra AT) — один из мировых лидеров в сфере интегрированных решений по обеспечению безопасности транспортных средств, а так же предотвращению и управлению рисками, связанными с транспортными средствами, такими как: угоны, разбойные нападения и мошенничество."
+                    })
+                +e('item',{b: 'container__col'})
+                    +TextBlock({},{
+                        icon: "#symbol_fleur", title: 'Заголовок раскрывающий смысл сказанного',
+                        text: "Vodafone Automotive Technologies (до 31 марта 2015 года, Cobra AT) — один из мировых лидеров в сфере интегрированных решений по обеспечению безопасности транспортных средств, а так же предотвращению и управлению рисками, связанными с транспортными средствами, такими как: угоны, разбойные нападения и мошенничество."
+                    })
+    +InfoBlock2({m:'theme-grey'})
+    +InfoBlock3()
+    +CallForm()
+    +b('quality-control',{})
+        +e('link',{},'a')(href="#")= 'Отдел Контроля Качества'

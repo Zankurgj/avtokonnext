@@ -1,0 +1,132 @@
+.stages{
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    position: relative;
+    transition: all 0.2s ease;
+    @include respond-to(xs){
+      margin-top: 60px;
+    }
+    &:before{
+      content: '';
+      width: 0;
+      height: 100%;
+      left: calc(50% - 1px);
+      position: absolute;
+      display: block;
+      border: 1px solid $red;
+    }
+  }
+  &__button{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @include respond-to(xs){
+      margin-top: 30px;
+    }
+    @include respond-to(xs){
+      margin-bottom: 30px;
+    }
+  }
+  &__year,&__text{
+    display: inline-block;
+  }
+  &__year{
+    width: 20%;
+    text-align: center;
+    border-bottom: 2px solid $red;
+    transform: translateY(-50%);
+    padding-bottom: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    @include respond-to(md){
+      font-size: 24px;
+    }
+    @include respond-to(sm){
+      font-size: 18px;
+    }
+    @include respond-to(ss){
+      font-size: 16px;
+    }
+  }
+  &__text{
+    width: 80%;
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: right;
+    @include respond-to(md){
+      font-size: 16px;
+    }
+    @include respond-to(sm){
+      font-size: 14px;
+    }
+    @include respond-to(ss){
+      font-size: 12px;
+    }
+  }
+  &__item{
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 15px 0;
+    transition: all 0.5s ease;
+    transform: translateY(0);
+    &.state_hidden{
+      visibility: hidden;
+      opacity: 0;
+      transition: none;
+      transform: translateY(100%)!important;
+    }
+    &:after{
+      content: '';
+      display: block;
+      width: 0;
+      height: 50%;
+      position: absolute;
+      bottom: 0;
+      border-right: 2px solid $red;
+    }
+    &:nth-child(even){
+      justify-content: flex-end;
+      .stages__year{
+        order: 1;
+      }
+      .stages__text{
+        order: 2;
+        text-align: left;
+      }
+      &:after{
+        left: -1px;
+      }
+    }
+    &:nth-child(odd){
+      justify-content: flex-start;
+      transform: translateY(-50%);
+      .stages__year{
+        order: 2;
+      }
+      .stages__text{
+        order: 1;
+        text-align: right;
+      }
+      &:after{
+        right: -1px;
+      }
+    }
+  }
+}

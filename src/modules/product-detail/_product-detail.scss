@@ -1,0 +1,332 @@
+.product-detail{
+  position: relative;
+
+    &__header{
+      position: sticky;
+      top: 20px;
+      z-index: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 120px;
+      @include respond-to(960px){
+        top: 70px;
+        min-height: auto;
+        position: static;
+      }
+      &:before,&:after{
+        content:'';
+        border: 1px solid $dark;
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: mouse 3s ease-out infinite;
+        transition: opacity 0.5s ease;
+        @include respond-to(960px){
+         content: none;
+        }
+      }
+      &:before{
+        width: 50px;
+        height: 87px;
+        border-radius: 30px;
+        @include respond-to(md){
+          width: 40px;
+          height: 60px;
+        }
+      }
+      &:after{
+        border-width: 1px;
+        width: 0;
+        height: 5px;
+        transform: translateY(-60px) translateX(-50%);
+        opacity: 0.7;
+        @include respond-to(md){
+          transform: translateY(-40px) translateX(-50%);
+        }
+      }
+      &.state_scroll{
+        &:before,&:after{
+          opacity: 0;
+        }
+      }
+    }
+  &__img-wrapper{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    img{
+      height: auto;
+      width: auto;
+      max-width: 400px;
+      max-height: calc(100vh - 290px);
+      @include respond-to(960px){
+        width: calc(100vw - 60px);
+        max-width: 400px;
+        max-height: none;
+      }
+    }
+  }
+  &__title{
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 124px;
+    position: absolute;
+    top: 0;
+    .heading{
+      opacity: 0;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.25s ease;
+      max-width: 400px;
+      width: 100%;
+      &.state_show{
+        opacity: 1;
+      }
+    }
+    @include respond-to(ss){
+      top: 70px;
+    }
+    &.state_show{
+      opacity: 1;
+    }
+    @include respond-to(960px){
+      display: none;
+    }
+    &-before{
+      font-size: 20px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-transform: uppercase;
+      color: $darkGrey;
+      @include respond-to(md){
+        font-size: 16px;
+      }
+      @include respond-to(sm){
+        font-size: 14px;
+      }
+      @include respond-to(ss){
+        font-size: 12px;
+      }
+    }
+    .heading__title{
+      text-align: center;
+    }
+  }
+  &__wrapper{
+    margin-top: calc(100vh - 300px);
+    @include respond-to(960px){
+      margin-top: 0;
+      padding-bottom: 0;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    &-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      z-index: 5;
+      top: 164px;
+      left: 0;
+      width: 100%;
+      padding: 0 30px;
+      position: absolute;
+      @include respond-to(960px){
+        position: relative;
+        top: auto;
+        flex-wrap: wrap;
+        padding: 0;
+      }
+     &-left{
+        width: 33.33%;
+        max-width: 539px;
+        box-shadow: -9px 0px 21px 0 rgba(0, 0, 0, 0.1);
+       padding: 30px;
+       background: $light;
+       @include respond-to(960px){
+         width: 100%;
+         padding: 15px;
+         max-width: 100%;
+         background: transparentize($light,0.2);
+       }
+       .c-button{
+         width: 100%;
+       }
+       .heading{
+         margin-bottom: 40px;
+       }
+       &-price{
+         font-size: 24px;
+         font-weight: 600;
+         line-height: 1.25;
+         text-transform: uppercase;
+         @include respond-to(md){
+           font-size: 18px;
+         }
+         @include respond-to(sm){
+           font-size: 16px;
+         }
+         @include respond-to(ss){
+           font-size: 14px;
+         }
+         span{
+           font-size: 60px;
+           font-weight: bold;
+           font-style: normal;
+           font-stretch: normal;
+           line-height: 0.8;
+           letter-spacing: normal;
+           text-align: left;
+           color: $red;
+           text-transform: none;
+           @include respond-to(md){
+             font-size: 35px;
+           }
+           @include respond-to(sm){
+             font-size: 30px;
+           }
+           @include respond-to(ss){
+             font-size: 24px;
+           }
+         }
+       }
+       &-description{
+         border-top: 1px solid $grey;
+         border-bottom: 1px solid $grey;
+         padding: 5px 0;
+         margin-bottom: 35px;
+         margin-top: 40px;
+       }
+     }
+     &-right{
+       max-width: 548px;
+       width: 33.33%;
+       @include respond-to(960px){
+         padding: 15px;
+         width: 100%;
+         max-width: 100%;
+         background: transparentize($light,0.2);
+       }
+       .rating{
+         margin-top: 38px;
+       }
+        &-params{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: center;
+          border-top: 1px solid $grey;
+          border-bottom: 1px solid $grey;
+          padding: 30px 0;
+          padding-bottom: 15px;
+          margin-top: 40px;
+          .text-block{
+            margin-right: 30px;
+            margin-bottom: 22px;
+          }
+        }
+     }
+    }
+    &-item{
+      padding: 170px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 25vh;
+      @include respond-to(md){
+        padding: 120px 0;
+      }
+      @include respond-to(sm){
+        padding: 90px 0;
+      }
+      @include respond-to(xs){
+        padding: 60px 0;
+      }
+      .heading_size-h2{
+        display: none;
+      }
+      &:nth-child(odd){
+        background-color: $grey;
+      }
+      &:last-child{
+          padding-bottom: 120px;
+      }
+      @include respond-to(960px){
+        margin-top: 0;
+        z-index: 10;
+        position: relative;
+        background: transparentize($light,0.2);
+        .heading{
+          display: block;
+          margin: 15px;
+        }
+      }
+      &-left,&-right{
+        width: calc(50% - 250px);
+        @include respond-to(960px){
+          width: 100%;
+          padding: 15px;
+          max-width: 100%;
+
+          z-index: 10;
+        }
+      }
+      @include respond-to(1025px){
+        .text-block__icon .hex-icon{
+          width: 50px;
+          height: 50px;
+        }
+        .text-block__title{
+          .heading__title{
+            font-size: 18px;
+            @include respond-to(md){
+              font-size: 16px;
+            }
+            @include respond-to(sm){
+              font-size: 14px;
+            }
+            @include respond-to(ss){
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes mouse {
+  from{
+    bottom: 30px;
+  }
+  90%{
+    bottom: 0;
+  }
+  to{
+    bottom: 30px;
+}
+
+}
+@keyframes blink {
+  from{
+opacity: 1;
+}
+50%{
+  opacity: 0;
+}
+  to{
+    opacity: 1;
+  }
+}

@@ -1,0 +1,29 @@
+mixin AboutTechBlock(bem)
+    +b('about-tech-block',bem,'section')
+        +e('wrapper',{b:'container'})
+            +e('inner',{b:'container__row'})
+                +e('content',{b:'container__col'})
+                    +Heading({m:'theme-red-lined'},{titleSize:'2',title:'Инновациионные технологии'})
+                    p
+                        | Компания Cobra AT была основана в 1975 году и стала первой компанией, создавшей новый технологический подход к защите транспортных средств. Cobra AT открыла новую эру, в которой основой безопасности стали спутниковые и компьютерные технологии.
+                    p
+                        | Сегодня компания <b>Vodafone Automotive Technologies</b> – один из мировых лидеров в сфере разработки и внедрения интегрированных решений в следующих направлениях:
+                    +e('list',{b:"container__row"})
+                        +e('list-item',{b:'container__col'})
+                            +TextBlock({m:'icon-inline'},{
+                                icon: "#symbol_fleur",
+                                title: 'Обеспечение безопасности транспортных средств',
+                            })
+                        +e('list-item',{b:'container__col'})
+                            +TextBlock({m:'icon-inline'},{
+                                icon: "#symbol_fleur",
+                                title: 'Диспетчеризация автопарков (fleet)',
+                            })
+                        +e('list-item',{b:'container__col'})
+                            +TextBlock({m:'icon-inline'},{
+                                icon: "#symbol_fleur",
+                                title: 'Умное страхование (smart insurance)',
+                            })
+
+
+

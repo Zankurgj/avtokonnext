@@ -1,0 +1,54 @@
+.c-input{
+  border: 2px solid transparentize($darkGrey, 0.5);
+  border-radius: 30px;
+  background: transparent;
+  padding: 15px 34px;
+  display: inline-block;
+  max-width: 100%;
+  &_theme-square{
+    padding: 10px;
+    border-radius: 3px;
+    background: $light;
+  }
+  @include respond-to(md){
+    padding: 11px 20px;
+    min-width: 300px;
+  }
+  @include respond-to(ss){
+    min-width: auto;
+    width: 100%;
+  }
+  &__field{
+    background: transparent;
+    border: none;
+    &:focus,&:active{
+      outline: none;
+    }
+  }
+  textarea{
+    width: 100%;
+    min-height: 113px;
+  }
+  &.state_error{
+    border-color: $red;
+    animation: shake 0.5s ease;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {/*Здесь задано положение блока в 100 и 900 миллисекунду*/
+    transform: translate3d(-1px, 0, 0);  /*Здесь первое число - это отклонение по горизонтали, а второе - отклонение по вертикали.*/
+  }
+
+  20%, 80% {/*Здесь задано положение блока в 200 и 800 миллисекунду*/
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {/*Здесь задано положение блока в 300, 500 и 700 миллисекунду*/
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {/*Здесь задано положение блока в 400 и 600 миллисекунду*/
+    transform: translate3d(4px, 0, 0);
+  }
+}

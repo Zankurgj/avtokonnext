@@ -1,0 +1,9 @@
+@import "gui.scss";
+
+{{#shapes}}
+.{{base}} {
+  display: inline-block;
+  fill: currentColor;
+  transition: all 0.5s
+}
+{{/shapes}}

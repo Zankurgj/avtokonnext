@@ -1,0 +1,7 @@
+mixin ShortTextBlock(bem,data)
+    +b('short-text-block',bem)
+        if data.icon
+            +Icon({},data.icon)
+        if data.text
+            +e('text')
+                |!{data.text}

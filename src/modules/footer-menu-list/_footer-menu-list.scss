@@ -1,0 +1,61 @@
+.footer-menu-list{
+  color: inherit;
+  margin-bottom: 30px;
+  @include respond-to(xs){
+    margin-bottom: 15px;
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 30px;
+    @include respond-to(xs){
+      margin-bottom: 15px;
+    }
+    @include respond-to(md){
+      font-size: 18px;
+    }
+    @include respond-to(sm){
+      font-size: 16px;
+    }
+    @include respond-to(ss){
+      font-size: 14px;
+    }
+  }
+  &__items{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__link-item{
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    margin-bottom: 15px;
+    color: $dark;
+    @include respond-to(md){
+      font-size: 16px;
+    }
+    @include respond-to(sm){
+      font-size: 14px;
+    }
+    @include respond-to(ss){
+      font-size: 12px;
+    }
+
+    span,a{
+      font: inherit;
+      color: inherit;
+    }
+  }
+}

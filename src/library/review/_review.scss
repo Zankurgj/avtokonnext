@@ -1,0 +1,49 @@
+.review{
+  .rating{
+    margin-bottom: 15px;
+  }
+  &__date{
+    span{
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      @include respond-to(md){
+        font-size: 16px;
+      }
+      @include respond-to(sm){
+        font-size: 14px;
+      }
+      @include respond-to(ss){
+        font-size: 12px;
+      }
+    }
+    margin-bottom: 20px;
+  }
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__text{
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    @include respond-to(md){
+      font-size: 16px;
+    }
+    @include respond-to(sm){
+      font-size: 14px;
+    }
+    @include respond-to(ss){
+      font-size: 12px;
+    }
+  }
+}

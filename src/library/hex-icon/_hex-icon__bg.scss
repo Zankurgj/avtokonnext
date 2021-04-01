@@ -1,0 +1,17 @@
+.hex-icon__bg,.hex-icon__hover-bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+  fill: currentColor;
+}
+.hex-icon__hover-bg{
+  opacity: 0;
+}
+.hex-icon:hover{
+  .hex-icon__hover-bg{
+    opacity: 1;
+  }
+}

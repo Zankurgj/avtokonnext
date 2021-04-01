@@ -1,0 +1,25 @@
+.client{
+  background-color: #fafafa;
+  display: inline-block;
+  position: relative;
+  @include respond-to(xs){
+    width: 100%;
+  }
+  &__inner{
+    width: 208px;
+    padding-top: 72.12%;
+    display: block;
+    @include respond-to(xs){
+      width: 100%;
+      padding-top: 40%;
+    }
+  }
+  &__img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    max-width: 156px;
+    height: auto;
+  }
+}

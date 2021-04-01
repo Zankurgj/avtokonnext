@@ -1,0 +1,129 @@
+mixin Footer(bem)
+    //footer
+    +b('footer',bem,'footer')
+        +e('wrapper')
+            +e('inner')
+                +e('share')
+                    +e('share-inner',{b:'container'})
+                        +SocialBlock({},[
+                            {
+                                icon:'#symbol_twitter',
+                                url:'#'
+                            },
+                            {
+                                icon: '#symbol_linked-in',
+                                url: '#'
+                            },
+                            {
+                                icon: '#symbol_vk',
+                                url: '#'
+                            },
+                            {
+                                icon: '#symbol_facebook',
+                                url: '#'
+                            },
+                            {
+                                icon: '#symbol_youtube',
+                                url: '#'
+                            },
+                            {
+                                icon: '#symbol_instagramm',
+                                url: '#'
+                            }
+                        ])
+                +e('menu')
+                    +e('menu-inner',{b:'container'})
+                        +e('menu-row',{b:'container__row'})
+                            +e('menu-col')
+                                +FooterMenuList({},{
+                                    title:{
+                                        text: 'наши Услуги'
+                                    },
+                                    list:[
+                                        {
+                                            url:'#',
+                                            text: 'АСН-терминал'
+                                        },
+                                        {
+                                            url: '#',
+                                            text: 'Системы мониторинга'
+                                        },
+                                        {
+                                            url: '#',
+                                            text: 'Противоугонные комплексы'
+                                        },
+                                        {
+                                            url: '#',
+                                            text: 'Мобильные приложения'
+                                        }
+                                    ]
+                                })
+                            +e('menu-col')
+                                +FooterMenuList({},{
+                                    title: {
+                                        text: 'Партнерам'
+                                    },
+                                    list: [
+                                        {
+                                            url: '#',
+                                            text: 'Дилерам'
+                                        },
+                                        {
+                                            url: '#',
+                                            text: 'Автопроизводителям'
+                                        },
+                                        {
+                                            url: '#',
+                                            text: 'Страховым компаниям'
+                                        }
+                                    ]
+                                })
+                            +e('menu-col')
+                                +FooterMenuList({},{
+                                    title: {
+                                        text: 'О Компании'
+                                    },
+                                    list: [
+                                        {
+                                            url: '#',
+                                            text: 'Этапы развития'
+                                        },
+                                        {
+                                            url: '#',
+                                            text: 'Сертификаты'
+                                        },
+                                        {
+                                            url: '#',
+                                            text: 'Реквизиты'
+                                        },
+                                        {
+                                            url: '#',
+                                            text: 'Контакты'
+                                        }
+                                    ]
+                                })
+                            +e('menu-col')
+                                +FooterMenuList({},{
+                                    title: {
+                                        text: 'Время работы'
+                                    },
+                                    list: [
+                                        {
+                                            url: '',
+                                            text: 'Понедельник-Пятница с 09-00 до 18-00'
+                                        },
+                                        {
+                                            url: '',
+                                            text: 'Центр оперативного реагирования - 24/7'
+                                        },
+                                        {
+                                            url: '',
+                                            text: 'Телефон: <a href="tel:74959211911">+7 (495) 921-19-11</a>'
+                                        }
+                                    ]
+                                })
+                +e('copyright')
+                    +e('copyright-inner',{b:'container'})
+                      p © 2001-2019 Автоконнекс. Россия, Москва, 119334, 5-й Донской проезд, д. 19
+                      p Единый Информационный Центр: +7 (495) 921 19 11
+        //end footer

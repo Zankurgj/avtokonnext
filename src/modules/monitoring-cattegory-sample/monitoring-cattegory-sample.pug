@@ -1,0 +1,73 @@
+mixin MonitoringCattegorySample
+    +b('container__row')
+        +b('container__col',{m:'full'})
+            +Heading({},{titleSize:2, title:'Система мониторинга Cobra разработана специально для <br> организаций, имеющих парк автомобилей или спецтехники'})
+        +b('container__col',{m:'3'})
+            +ShortTextBlock({m:'text-centered',b:'short-text-block_theme-gradient'},{text:'Строительные организации'})
+        +b('container__col',{m:'3'})
+            +ShortTextBlock({m: 'text-centered',b:'short-text-block_theme-gradient'},{text: 'Прокат и аренда авто'})
+        +b('container__col',{m:'3'})
+            +ShortTextBlock({m: 'text-centered',b:'short-text-block_theme-gradient'},{text: 'Инкассация'})
+        +b('container__col',{m:'3'})
+            +ShortTextBlock({m: 'text-centered',b:'short-text-block_theme-gradient'},{text: 'Логистические компании'})
+        +b('container__col',{m:'3'})
+            +ShortTextBlock({m: 'text-centered',b:'short-text-block_theme-gradient'},{text: 'Службы доставки'})
+        +b('container__col',{m:'3'})
+            +ShortTextBlock({m: 'text-centered',b:'short-text-block_theme-gradient'},{text: 'Услуги спецтранспорта'})
+    +b('container__row',{b:'p-120'})
+        +b('container__col',{m: 'full'})
+            +Heading({},{
+                titleSize: 2,
+                title: 'Преимущества использования системы мониторинга <br> транспорта Cobra'
+            })
+        +b('container__col',{m: 'full'})
+            +ThemedList({m:'list-type-circle',b:'themed-list_mode-double-col'},[
+                'Опыт более 18 лет',
+                'Производим и продаем собственное оборудование',
+                'Поддержка 24/7',
+                'Сертифицированные технологии и персонал',
+                'Собственная станция ТО',
+                'Мобильные приложения',
+                'Гарантия',
+                'Повышение эффективности управления автопарком',
+                'Оптимизация затрат всего предприятия',
+                'Повышение исполнительской дисциплины водителей',
+                'Уменьшение издержек предприятия по расходу топлива',
+                'Контроль перевозимого груза',
+                'Обеспечение безопасности автопарка и сотрудников',
+            ])
+    +b('container__row')
+        +b('container__col',{m: 'full'})
+            +Heading({},{
+                titleSize: 2,
+                title: 'Зачем нужен мониторинг транспорта'
+            })
+            +b('text-block')
+                p
+                    |Хороший опыт установки профессионалльного противоугонного оборудования и эффективного <br> противодействия угонам помогает нам с уверенностью гарантировать ваше спокойствие.
+        +b('container__col',{m: 'half'})
+            +ShortTextBlock({m:'text-theme-bolder'},{icon:'#symbol_location-pin',text:'Контроль перемещения транспорта'})
+        +b('container__col',{m: 'half'})
+            +ShortTextBlock({m:'text-theme-bolder'},{icon: '#symbol_gear-loading', text: 'Контроль работы механизмов'})
+        +b('container__col',{m: 'half'})
+            +ShortTextBlock({m:'text-theme-bolder'},{icon: '#symbol_speedometer', text: 'Контроль скоростного режима'})
+        +b('container__col',{m: 'half'})
+            +ShortTextBlock({m:'text-theme-bolder'},{icon: '#symbol_gasoline-pump', text: 'Контроль расхода топлива'})
+        +b('container__col',{m: 'half'})
+            +ShortTextBlock({m:'text-theme-bolder'},{icon: '#symbol_location-pin', text: 'Контроль перемещения транспорта'})
+        +b('container__col',{m: 'half'})
+            +ShortTextBlock({m:'text-theme-bolder'},{icon: '#symbol_gear-loading', text: 'Контроль работы механизмов'})
+        +b('container__col',{m: 'half'})
+            +ShortTextBlock({m:'text-theme-bolder'},{icon: '#symbol_speedometer', text: 'Контроль скоростного режима'})
+        +b('container__col',{m: 'half'})
+            +ShortTextBlock({m:'text-theme-bolder'},{icon: 'https://api.icons8.com/download/22be815d0465a849eb05744984759928828d1ec3/windows10/PNG/512/Very_Basic/plus-512.png', text: 'Контроль расхода топлива'})
+
+    +b('container__row',{b: 'p-120'})
+        +b('container__col',{m:'3'})
+            +PercentageBlock({},{value:'15',tips:'%',text:'Уменьшение амортизации транспорта'})
+        +b('container__col',{m: '3'})
+            +PercentageBlock({},{value: '30', tips: '%', text: 'Сокращение затрат на ГСМ'})
+        +b('container__col',{m: '3'})
+            +PercentageBlock({},{value: '70', tips: '%', text: 'Сокращение коммуникационных расходов'})
+
+

@@ -1,0 +1,16 @@
+mixin InfoBlock2(bem,data)
+    +b('info-block',bem,'section')
+        +e('wrapper',{b:"container"})
+            +e('inner',{b:"container__row"})
+                +e('col',{m: 'text',b:'info-block__col_1'})
+                    +e('title') карта партнеров
+                    +Heading({m: "theme-red-lined"},{
+                        titleSize: '2',
+                        title: 'Партнерская сеть центров Автоконнекс'
+                    })
+                    p Компания ООО "АВТОКОННЕКС" более 15 лет  успешно работает на рынке автомобильной безопасности.
+                    p С Нашими постоянными партнерами стали ведущие страховые компании, российские представительства  и дилеры международных автомобильных холдингов.
+                    +Button({m: 'theme-red'},{selector: 'a', text: 'Контакты'})(href="#")
+                +e('col',{m:'img',b:'info-block__col_2'})
+                    +e('img',{},'img')(src="images/map.png")
+
