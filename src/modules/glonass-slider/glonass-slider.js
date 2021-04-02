@@ -18,6 +18,13 @@ export default class GlonassSlider {
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        renderBullet: function (index, className) {
+          return (
+            '<span class="' +
+            className +
+            '"> <span class="swiper-pagination__item"></span> </span>'
+          );
+        },
       },
     });
   }

@@ -3,6 +3,15 @@
 }
 .glonass-head {
   padding: 170px 80px 20px 40px;
+  @include respond-to(md) {
+    padding: 170px 80px 20px 40px;
+  }
+  @include respond-to(sm) {
+    padding: 60px 40px 20px 20px;
+  }
+  @include respond-to(xs) {
+    padding: 60px 40px 20px 20px;
+  }
   &__wrapper-top-left {
     width: 100%;
     max-width: 622px;
@@ -11,12 +20,12 @@
     background: $light;
     border-radius: 10px;
 
-    // @include respond-to(960px) {
-    //   width: 100%;
-    //   padding: 15px;
-    //   max-width: 100%;
-    //   background: transparentize($light, 0.2);
-    // }
+    @include respond-to(960px) {
+      width: 100%;
+      padding: 15px;
+      max-width: 100%;
+      background: transparentize($light, 0.2);
+    }
     .c-button {
       width: 100%;
     }
@@ -28,15 +37,15 @@
       font-weight: 600;
       line-height: 1.25;
       text-transform: uppercase;
-      // @include respond-to(md) {
-      //   font-size: 18px;
-      // }
-      // @include respond-to(sm) {
-      //   font-size: 16px;
-      // }
-      // @include respond-to(ss) {
-      //   font-size: 14px;
-      // }
+      @include respond-to(md) {
+        font-size: 18px;
+      }
+      @include respond-to(sm) {
+        font-size: 16px;
+      }
+      @include respond-to(ss) {
+        font-size: 14px;
+      }
       span {
         font-size: 60px;
         font-weight: bold;
@@ -47,15 +56,15 @@
         text-align: left;
         color: $red;
         text-transform: none;
-        // @include respond-to(md) {
-        //   font-size: 35px;
-        // }
-        // @include respond-to(sm) {
-        //   font-size: 30px;
-        // }
-        // @include respond-to(ss) {
-        //   font-size: 24px;
-        // }
+        @include respond-to(md) {
+          font-size: 35px;
+        }
+        @include respond-to(sm) {
+          font-size: 30px;
+        }
+        @include respond-to(ss) {
+          font-size: 24px;
+        }
       }
     }
     &-description {
@@ -70,6 +79,11 @@
 .container__col-glonass-text {
   max-width: 54%;
   flex-basis: 54%;
+  @media screen and (max-width: 960px) {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 40px;
+  }
 }
 .container__col-glonass-msg {
   display: flex;
@@ -77,7 +91,12 @@
   align-items: flex-start;
   max-width: 46%;
   flex-basis: 46%;
-  padding-left: 20px;
+  padding-left: 40px;
+  @media screen and (max-width: 960px) {
+    max-width: 100%;
+    flex-basis: 100%;
+    padding-left: 0;
+  }
 }
 .glonass-head__img {
   display: block;
@@ -85,14 +104,32 @@
 }
 .h1__glonass-head {
   font-size: 42px;
-  line-height: 54px;
+  line-height: 1.4;
   color: $dark;
   font-weight: 500;
   margin: 0 0 1em 0;
+  @include respond-to(md) {
+    font-size: 32px;
+  }
+  @include respond-to(sm) {
+    font-size: 26px;
+  }
+  @include respond-to(xs) {
+    font-size: 24px;
+  }
 }
 .glonass-head__text {
   font-size: 20px;
   line-height: 30px;
   color: $dark;
   margin: 0 0 1em 0;
+  @include respond-to(md) {
+    font-size: 18;
+  }
+  @include respond-to(sm) {
+    font-size: 16px;
+  }
+  @include respond-to(xs) {
+    font-size: 14px;
+  }
 }

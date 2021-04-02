@@ -4,94 +4,94 @@ mixin GlonassSlider(bem)
             h3.h3__glonass-slider оборудование
             h2.h2__glonass-slider Компоненты устройства
         +e('wrapper',{b:'container'})
-        .swiper-container.js--glonass-slider
-            .swiper-wrapper
-                .swiper-slide
-                    +e('inner',{b:'container__row'})
-                        .glonass-slider__col
-                            img(src="images/box1.png", alt="ЭЛЕКТРОННЫЙ БЛОК")
-                        .glonass-slider__col
-                            p.glonass-slider__title ЭЛЕКТРОННЫЙ БЛОК
-                            p.glonass-slider__text Основной блок управления, включающий в себя:
-                            ul.glonass-slider__list
-                                li
-                                    p.glonass-slider__text управляющий процессор
-                                li
-                                    p.glonass-slider__text модуль связи
-                                li
-                                    p.glonass-slider__text микросхему SIM
-                                li
-                                    p.glonass-slider__text навигационный приемник
-                                li
-                                    p.glonass-slider__text антенны ГЛОНАСС/GPS и GSM
-                                li
-                                    p.glonass-slider__text датчик определения ДТП и переворота
-                                li
-                                    p.glonass-slider__text резервный источник питания
-                .swiper-slide
-                    +e('inner',{b:'container__row'})
-                        .glonass-slider__col
-                            img(src="images/mic.png", alt="ЭЛЕКТРОННЫЙ БЛОК")
-                        .glonass-slider__col
-                            p.glonass-slider__title ЭЛЕКТРОННЫЙ БЛОК
-                            p.glonass-slider__text Основной блок управления, включающий в себя:
-                            ul.glonass-slider__list
-                                li
-                                    p.glonass-slider__text управляющий процессор
-                                li
-                                    p.glonass-slider__text модуль связи
-                                li
-                                    p.glonass-slider__text микросхему SIM
-                                li
-                                    p.glonass-slider__text навигационный приемник
-                                li
-                                    p.glonass-slider__text антенны ГЛОНАСС/GPS и GSM
-                                li
-                                    p.glonass-slider__text датчик определения ДТП и переворота
-                                li
-                                    p.glonass-slider__text резервный источник питания
-                .swiper-slide
-                    +e('inner',{b:'container__row'})
-                        .glonass-slider__col
-                            img(src="images/antenna.png", alt="ЭЛЕКТРОННЫЙ БЛОК")
-                        .glonass-slider__col
-                            p.glonass-slider__title ЭЛЕКТРОННЫЙ БЛОК
-                            p.glonass-slider__text Основной блок управления, включающий в себя:
-                            ul.glonass-slider__list
-                                li
-                                    p.glonass-slider__text управляющий процессор
-                                li
-                                    p.glonass-slider__text модуль связи
-                                li
-                                    p.glonass-slider__text микросхему SIM
-                                li
-                                    p.glonass-slider__text навигационный приемник
-                                li
-                                    p.glonass-slider__text антенны ГЛОНАСС/GPS и GSM
-                                li
-                                    p.glonass-slider__text датчик определения ДТП и переворота
-                                li
-                                    p.glonass-slider__text резервный источник питания
-                .swiper-slide
-                    +e('inner',{b:'container__row'})
-                        .glonass-slider__col
-                            img(src="images/button.png", alt="ЭЛЕКТРОННЫЙ БЛОК")
-                        .glonass-slider__col
-                            p.glonass-slider__title ЭЛЕКТРОННЫЙ БЛОК
-                            p.glonass-slider__text Основной блок управления, включающий в себя:
-                            ul.glonass-slider__list
-                                li
-                                    p.glonass-slider__text управляющий процессор
-                                li
-                                    p.glonass-slider__text модуль связи
-                                li
-                                    p.glonass-slider__text микросхему SIM
-                                li
-                                    p.glonass-slider__text навигационный приемник
-                                li
-                                    p.glonass-slider__text антенны ГЛОНАСС/GPS и GSM
-                                li
-                                    p.glonass-slider__text датчик определения ДТП и переворота
-                                li
-                                    p.glonass-slider__text резервный источник питания
-        .swiper-pagination
+            .swiper-container.js--glonass-slider
+                .swiper-wrapper
+                    .swiper-slide
+                        +e('inner',{b:'container__row'})
+                            .glonass-slider__col
+                                img.glonass-slider__img(src="images/box1.png", alt="ЭЛЕКТРОННЫЙ БЛОК")
+                            .glonass-slider__col.glonass-slider__col--text
+                                p.glonass-slider__title ЭЛЕКТРОННЫЙ БЛОК
+                                p.glonass-slider__text Основной блок управления, включающий в себя:
+                                ul.glonass-slider__list
+                                    li
+                                        p.glonass-slider__text управляющий процессор
+                                    li
+                                        p.glonass-slider__text модуль связи
+                                    li
+                                        p.glonass-slider__text микросхему SIM
+                                    li
+                                        p.glonass-slider__text навигационный приемник
+                                    li
+                                        p.glonass-slider__text антенны ГЛОНАСС/GPS и GSM
+                                    li
+                                        p.glonass-slider__text датчик определения ДТП и переворота
+                                    li
+                                        p.glonass-slider__text резервный источник питания
+                    .swiper-slide
+                        +e('inner',{b:'container__row'})
+                            .glonass-slider__col
+                                img.glonass-slider__img(src="images/mic.png", alt="ЭЛЕКТРОННЫЙ БЛОК")
+                            .glonass-slider__col.glonass-slider__col--text
+                                p.glonass-slider__title ЭЛЕКТРОННЫЙ БЛОК
+                                p.glonass-slider__text Основной блок управления, включающий в себя:
+                                ul.glonass-slider__list
+                                    li
+                                        p.glonass-slider__text управляющий процессор
+                                    li
+                                        p.glonass-slider__text модуль связи
+                                    li
+                                        p.glonass-slider__text микросхему SIM
+                                    li
+                                        p.glonass-slider__text навигационный приемник
+                                    li
+                                        p.glonass-slider__text антенны ГЛОНАСС/GPS и GSM
+                                    li
+                                        p.glonass-slider__text датчик определения ДТП и переворота
+                                    li
+                                        p.glonass-slider__text резервный источник питания
+                    .swiper-slide
+                        +e('inner',{b:'container__row'})
+                            .glonass-slider__col
+                                img.glonass-slider__img(src="images/antenna.png", alt="ЭЛЕКТРОННЫЙ БЛОК")
+                            .glonass-slider__col.glonass-slider__col--text
+                                p.glonass-slider__title ЭЛЕКТРОННЫЙ БЛОК
+                                p.glonass-slider__text Основной блок управления, включающий в себя:
+                                ul.glonass-slider__list
+                                    li
+                                        p.glonass-slider__text управляющий процессор
+                                    li
+                                        p.glonass-slider__text модуль связи
+                                    li
+                                        p.glonass-slider__text микросхему SIM
+                                    li
+                                        p.glonass-slider__text навигационный приемник
+                                    li
+                                        p.glonass-slider__text антенны ГЛОНАСС/GPS и GSM
+                                    li
+                                        p.glonass-slider__text датчик определения ДТП и переворота
+                                    li
+                                        p.glonass-slider__text резервный источник питания
+                    .swiper-slide
+                        +e('inner',{b:'container__row'})
+                            .glonass-slider__col
+                                img.glonass-slider__img(src="images/button.png", alt="ЭЛЕКТРОННЫЙ БЛОК")
+                            .glonass-slider__col.glonass-slider__col--text
+                                p.glonass-slider__title ЭЛЕКТРОННЫЙ БЛОК
+                                p.glonass-slider__text Основной блок управления, включающий в себя:
+                                ul.glonass-slider__list
+                                    li
+                                        p.glonass-slider__text управляющий процессор
+                                    li
+                                        p.glonass-slider__text модуль связи
+                                    li
+                                        p.glonass-slider__text микросхему SIM
+                                    li
+                                        p.glonass-slider__text навигационный приемник
+                                    li
+                                        p.glonass-slider__text антенны ГЛОНАСС/GPS и GSM
+                                    li
+                                        p.glonass-slider__text датчик определения ДТП и переворота
+                                    li
+                                        p.glonass-slider__text резервный источник питания
+            .swiper-pagination.glonass-slider__pagination

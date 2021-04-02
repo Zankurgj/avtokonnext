@@ -1,6 +1,15 @@
 .glonass-feature {
   padding: 70px 170px 74px 100px;
   background-color: $grey;
+  @include respond-to(md) {
+    padding: 70px 80px 74px 40px;
+  }
+  @include respond-to(sm) {
+    padding: 50px 40px 74px 20px;
+  }
+  @include respond-to(xs) {
+    padding: 40px 40px 44px 20px;
+  }
 }
 .glonass-feature__wrapper {
   max-width: 1920px;
@@ -12,6 +21,15 @@
   color: $darkGrey;
   text-align: center;
   margin: 0 0 20px 0;
+  @include respond-to(md) {
+    font-size: 20px;
+  }
+  @include respond-to(sm) {
+    font-size: 18px;
+  }
+  @include respond-to(xs) {
+    font-size: 16px;
+  }
 }
 .h2__glonass-feature {
   font-size: 40px;
@@ -19,22 +37,81 @@
   color: $dark;
   text-align: center;
   margin: 0 0 100px 0;
+  @include respond-to(md) {
+    font-size: 32px;
+  }
+  @include respond-to(sm) {
+    font-size: 26px;
+    margin: 0 0 20px 0;
+  }
+  @include respond-to(xs) {
+    font-size: 26px;
+    margin: 0 0 20px 0;
+  }
 }
 .glonass-feature__inner {
   margin-bottom: 40px;
+  @include respond-to(xs) {
+    margin-bottom: 20px;
+  }
 }
 .glonass-feature__col--text {
   max-width: 26%;
   flex-basis: 26%;
+  @media screen and (max-width: 1600px) {
+    max-width: 30%;
+    flex-basis: 30%;
+  }
+  @include respond-to(sm) {
+    order: 2;
+    max-width: 50%;
+    flex-basis: 50%;
+    padding: 0 20px;
+  }
+  @include respond-to(xs) {
+    order: 2;
+    max-width: 50%;
+    flex-basis: 50%;
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 960px) {
+    padding: 0 10px;
+  }
+  @media screen and (max-width: 650px) {
+    max-width: 100%;
+    flex-basis: 100%;
+    padding: 0;
+  }
 }
 .glonass-feature__col--img {
-  flex-grow: 1;
+  max-width: 48%;
+  flex-basis: 48%;
   padding: 0 20px;
+  @media screen and (max-width: 1600px) {
+    max-width: 40%;
+    flex-basis: 40%;
+  }
+  @include respond-to(sm) {
+    order: 1;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  @include respond-to(xs) {
+    order: 1;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
 }
 .glonass-feature__img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
+  @include respond-to(sm) {
+    max-width: 360px;
+  }
+  @media screen and (max-width: 960px) {
+    max-width: 270px;
+  }
 }
 .glonass-feature__list {
   padding: 0;
@@ -42,33 +119,54 @@
   list-style: none;
 }
 .glonass-feature__item {
+  display: flex;
+  align-items: center;
   position: relative;
-  padding-left: 124px;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 1.2;
   color: #111111;
   margin-bottom: 70px;
   p {
     margin: 0;
   }
+  @media screen and (max-width: 1600px) {
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 650px) {
+    margin-bottom: 30px;
+  }
 }
 .glonass-feature__icon {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
   width: 100px;
   height: 80px;
+  margin-right: 24px;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 79 60' id='symbol_hexbordered' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23d3d2d2' d='M77.644 27.975c.731 1.369.958 2.419.094 3.909q-.863 1.491-8.613 12.864-7.888 12.167-8.835 13.194c-.946 1.027-1.602 1.425-3.29 1.554q-1.688.129-17.5 0-15.875.058-17.469 0c-1.594-.058-2.409-.541-3.36-1.612q-.952-1.071-8.796-13.136-7.711-11.189-8.652-12.922c-.942-1.732-.746-2.337.047-3.722q.792-1.385 8.605-12.852Q17.512 3.413 18.6 2.222C19.688 1.031 20.437.633 21.938.504q1.5-.129 17.562 0 15.062-.152 17.5 0c2.437.152 2.456.565 3.337 1.624q.882 1.059 8.788 13.124 7.788 11.354 8.519 12.723zm-.95.053c.712 1.333.932 2.355.092 3.807q-.841 1.451-8.387 12.524-7.68 11.847-8.602 12.847c-.921 1-1.56 1.387-3.203 1.513q-1.643.126-17.039 0-15.457.057-17.009 0c-1.552-.057-2.345-.527-3.272-1.57q-.927-1.043-8.564-12.79-7.508-10.894-8.424-12.581c-.917-1.687-.727-2.276.045-3.625q.772-1.348 8.379-12.513 7.436-11.527 8.495-12.687c1.059-1.159 1.789-1.546 3.25-1.672q1.46-.126 17.1 0 14.665-.148 17.039 0c2.373.148 2.391.55 3.249 1.581q.858 1.031 8.556 12.778 7.584 11.056 8.295 12.388z' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+  @media screen and (max-width: 1600px) {
+    width: 80px;
+    height: 60px;
+    margin-right: 20px;
+  }
+  @media screen and (max-width: 960px) {
+    width: 60px;
+    height: 46px;
+    margin-right: 20px;
+  }
   img {
     display: block;
     max-width: 100%;
+    @media screen and (max-width: 1600px) {
+      width: 40px;
+    }
+    @media screen and (max-width: 960px) {
+      width: 30px;
+    }
   }
 }
 .glonass-feature__text {
@@ -78,5 +176,14 @@
   text-align: center;
   color: $dark;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.2;
+  @include respond-to(md) {
+    font-size: 18px;
+  }
+  @include respond-to(sm) {
+    font-size: 16px;
+  }
+  @include respond-to(xs) {
+    font-size: 14px;
+  }
 }
