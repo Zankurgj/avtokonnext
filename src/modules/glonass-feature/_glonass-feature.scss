@@ -37,6 +37,7 @@
   color: $dark;
   text-align: center;
   margin: 0 0 20px 0;
+
   @include respond-to(md) {
     font-size: 32px;
   }
@@ -46,6 +47,33 @@
   }
   @include respond-to(xs) {
     font-size: 26px;
+  }
+}
+.h2__glonass-feature-mobile {
+  display: none;
+  @include respond-to(sm) {
+    display: block;
+  }
+  @include respond-to(xs) {
+    display: block;
+  }
+}
+.h2__glonass-feature-desktop {
+  display: none;
+  &.show {
+    display: block;
+    @include respond-to(sm) {
+      display: none;
+    }
+    @include respond-to(xs) {
+      display: none;
+    }
+  }
+  @include respond-to(sm) {
+    display: none;
+  }
+  @include respond-to(xs) {
+    display: none;
   }
 }
 .glonass-feature__inner {
@@ -85,6 +113,12 @@
 }
 .glonass-feature__col--bottom {
   padding-bottom: 160px;
+  @include respond-to(sm) {
+    padding-bottom: 0px;
+  }
+  @include respond-to(xs) {
+    padding-bottom: 0px;
+  }
 }
 .glonass-feature__col--img {
   position: sticky;
@@ -99,6 +133,8 @@
     flex-basis: 40%;
   }
   @include respond-to(sm) {
+    position: static;
+    top: 0;
     order: 1;
     max-width: 100%;
     flex-basis: 100%;

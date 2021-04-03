@@ -3,7 +3,7 @@ mixin GlonassFeature(bem)
         +e('wrapper',{b:'container'})
             h3.h3__glonass-feature Преимущества
             +e('inner',{b:'container__row'})
-                .glonass-feature__col.glonass-feature__col--text
+                .glonass-feature__col.glonass-feature__col--text(data-view='top')
                     ul.glonass-feature__list
                         li.glonass-feature__item
                             span.glonass-feature__icon 
@@ -27,7 +27,9 @@ mixin GlonassFeature(bem)
                             p Автоматическая и ручная диагностика
                 .glonass-feature__col.glonass-feature__col--img
                     .glonass-feature_sticky-block
-                        h2.h2__glonass-feature Основные функции
+                        h2.h2__glonass-feature.h2__glonass-feature-mobile Основные функции и технические характеристики
+                        h2.h2__glonass-feature.h2__glonass-feature-desktop.js--head-top Основные функции
+                        h2.h2__glonass-feature.h2__glonass-feature-desktop.js--head-bottom Технические характеристики
                         img.glonass-feature__img(src="images/box.png", alt="характеристики")
                 .glonass-feature__col.glonass-feature__col--text
                     ul.glonass-feature__list
@@ -47,7 +49,7 @@ mixin GlonassFeature(bem)
                             span.glonass-feature__icon 
                                 img(src="images/09.png", alt="Иконка приемущества")
                             p Навигация для системы мультимедиа
-                .glonass-feature__col.glonass-feature__col--text.glonass-feature__col--bottom
+                .glonass-feature__col.glonass-feature__col--text.glonass-feature__col--bottom(data-view='bottom')
                     ul.glonass-feature__list
                         li.glonass-feature__item
                             span.glonass-feature__icon 

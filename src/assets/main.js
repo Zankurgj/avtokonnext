@@ -4,8 +4,9 @@ import "fetch-polyfill";
 import "../modules/lightbox/light-box";
 
 import MobileMenu from "../modules/header/header";
-import MainSlider from "../modules/glonass-slider/glonass-slider";
-import glonassSlider from "../modules/main-slider/main-slider";
+import MainSlider from "../modules/main-slider/main-slider";
+import glonassSlider from "../modules/glonass-slider/glonass-slider";
+import glonassInView from "../modules/glonass-feature/glonass-feature";
 import Slider from "../modules/slider/slider";
 import CInput from "../library/input/c-input";
 import AjaxForm from "../modules/call-form/form";
@@ -29,6 +30,7 @@ for (let i = 0; i < global.stickyEl.length; i++) {
 global.mobileMenu = new MobileMenu();
 global.mainSlider = new MainSlider();
 global.glonassSlider = new glonassSlider();
+global.glonassInView = new glonassInView();
 global.sliders = new Slider();
 global.inputs = new CInput();
 global.ajaxForms = [];
