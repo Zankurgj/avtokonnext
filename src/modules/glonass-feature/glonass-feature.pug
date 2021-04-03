@@ -2,7 +2,6 @@ mixin GlonassFeature(bem)
     +b('glonass-feature',bem,'section')
         +e('wrapper',{b:'container'})
             h3.h3__glonass-feature Преимущества
-            h2.h2__glonass-feature Основные функции и технические характеристики
             +e('inner',{b:'container__row'})
                 .glonass-feature__col.glonass-feature__col--text
                     ul.glonass-feature__list
@@ -27,8 +26,28 @@ mixin GlonassFeature(bem)
                                 img(src="images/05.png", alt="Иконка приемущества")
                             p Автоматическая и ручная диагностика
                 .glonass-feature__col.glonass-feature__col--img
-                    img.glonass-feature__img(src="images/box.png", alt="характеристики")
+                    .glonass-feature_sticky-block
+                        h2.h2__glonass-feature Основные функции
+                        img.glonass-feature__img(src="images/box.png", alt="характеристики")
                 .glonass-feature__col.glonass-feature__col--text
+                    ul.glonass-feature__list
+                        li.glonass-feature__item
+                            span.glonass-feature__icon 
+                                img(src="images/06.png", alt="Иконка приемущества")
+                            p Телематические сервисы
+                        li.glonass-feature__item
+                            span.glonass-feature__icon 
+                                img(src="images/07.png", alt="Иконка приемущества")
+                            p Обновление ПО «по воздуху»
+                        li.glonass-feature__item
+                            span.glonass-feature__icon 
+                                img(src="images/08.png", alt="Иконка приемущества")
+                            p Выход в интернет
+                        li.glonass-feature__item
+                            span.glonass-feature__icon 
+                                img(src="images/09.png", alt="Иконка приемущества")
+                            p Навигация для системы мультимедиа
+                .glonass-feature__col.glonass-feature__col--text.glonass-feature__col--bottom
                     ul.glonass-feature__list
                         li.glonass-feature__item
                             span.glonass-feature__icon 
@@ -42,12 +61,14 @@ mixin GlonassFeature(bem)
                             span.glonass-feature__icon 
                                 img(src="images/12.png", alt="Иконка приемущества")
                             p Резервный аккумулятор
+                .glonass-feature__col.glonass-feature__col--text.glonass-feature__col--bottom
+                    ul.glonass-feature__list
                         li.glonass-feature__item
                             span.glonass-feature__icon 
                                 img(src="images/13.png", alt="Иконка приемущества")
                             p Номинальное напряжение питания 12 В или 24 В
                         li.glonass-feature__item
-                            span.glonass-feature__icon
+                            span.glonass-feature__icon 
                                 img(src="images/14.png", alt="Иконка приемущества")
                             p Диапазон рабочих температур от -40 до +85 С
             p.glonass-feature__text Стоимость установки «ЭРА-ГЛОНАСС» определяется в индивидуальном порядке в зависимости от модели автомобиля и сложности установки Дизайн упаковки и компонентов может отличаться. Не является публичной офертой
