@@ -85,6 +85,13 @@
     margin-bottom: 40px;
   }
 }
+.glonass-head__img-mobile {
+  display: none;
+  max-width: 100%;
+  @media screen and (max-width: 960px) {
+    display: block;
+  }
+}
 .container__col-glonass-msg {
   display: flex;
   justify-content: flex-end;
@@ -101,6 +108,12 @@
 .glonass-head__img {
   display: block;
   max-width: 100%;
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+  @include respond-to(xs) {
+    display: none;
+  }
 }
 .h1__glonass-head {
   font-size: 42px;

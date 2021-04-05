@@ -51,6 +51,7 @@
 }
 .h2__glonass-feature-mobile {
   display: none;
+  margin-bottom: 32px;
   @include respond-to(sm) {
     display: block;
   }
@@ -140,6 +141,7 @@
     flex-basis: 100%;
   }
   @include respond-to(xs) {
+    position: static;
     order: 1;
     max-width: 100%;
     flex-basis: 100%;
@@ -149,11 +151,8 @@
   display: block;
   max-width: 100%;
   margin: 0 auto;
-  @include respond-to(sm) {
-    max-width: 360px;
-  }
   @media screen and (max-width: 960px) {
-    max-width: 270px;
+    display: none;
   }
 }
 .glonass-feature__list {
